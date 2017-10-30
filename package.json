@@ -4,11 +4,16 @@
   "private": true,
   "dependencies": {
     "antd": "^2.13.8",
+    "next": "^4.1.4",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "react-scripts": "1.0.14"
+    "react-scripts": "1.0.14",
+    "styled-components": "^2.2.3"
   },
   "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
