@@ -10,10 +10,10 @@ class Main extends React.Component {
     render() {
       return (
         <div>
-            <Head>
-                <link rel='stylesheet' href='/static/css/antd.min.css' />
-            </Head>
             <MyLayout>
+                <Head>
+                    <title>DatabaseHunsa | หน้าหลัก</title>
+                </Head>
                 <div>
                     test
                     <br/>

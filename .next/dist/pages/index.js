@@ -60,21 +60,22 @@ var Main = function (_React$Component) {
                     fileName: _jsxFileName,
                     lineNumber: 12
                 }
-            }, _react2.default.createElement(_head2.default, {
+            }, _react2.default.createElement(_layout2.default, {
                 __source: {
                     fileName: _jsxFileName,
                     lineNumber: 13
                 }
-            }, _react2.default.createElement('link', { rel: 'stylesheet', href: '/static/css/antd.min.css', __source: {
+            }, _react2.default.createElement(_head2.default, {
+                __source: {
                     fileName: _jsxFileName,
                     lineNumber: 14
                 }
-            })), _react2.default.createElement(_layout2.default, {
+            }, _react2.default.createElement('title', {
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 16
+                    lineNumber: 15
                 }
-            }, _react2.default.createElement('div', {
+            }, 'DatabaseHunsa | \u0E2B\u0E19\u0E49\u0E32\u0E2B\u0E25\u0E31\u0E01')), _react2.default.createElement('div', {
                 __source: {
                     fileName: _jsxFileName,
                     lineNumber: 17
@@ -97,4 +98,4 @@ var Main = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = Main;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL2luZGV4LmpzIl0sIm5hbWVzIjpbIkhlYWQiLCJNeUxheW91dCIsIk1haW4iLCJSZWFjdCIsIkNvbXBvbmVudCJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBSUEsQUFBTzs7OztBQUNQLEFBQU8sQUFBYzs7Ozs7OztBQUxyQjtBQUNBO0FBQ0E7O0lBTU0sQTs7Ozs7Ozs7Ozs7aUNBQ08sQUFDUDttQ0FDRSxjQUFBOzs4QkFBQTtnQ0FBQSxBQUNJO0FBREo7QUFBQSxhQUFBLGtCQUNJLEFBQUM7OzhCQUFEO2dDQUFBLEFBQ0k7QUFESjtBQUFBLHVEQUNVLEtBQU4sQUFBVSxjQUFhLE1BQXZCLEFBQTRCOzhCQUE1QjtnQ0FGUixBQUNJLEFBQ0ksQUFFSjtBQUZJO2lDQUVKLEFBQUM7OzhCQUFEO2dDQUFBLEFBQ0k7QUFESjtBQUFBLCtCQUNJLGNBQUE7OzhCQUFBO2dDQUFBO0FBQUE7QUFBQSxlQUVJOzs4QkFBQTtnQ0FGSixBQUVJLEFBQ0E7QUFEQTtBQUFBOzs4QkFDQTtnQ0FUZCxBQUNFLEFBSUksQUFDSSxBQUdJLEFBS2Y7QUFMZTtBQUFBOzs7OztFQVhELGdCQUFNLEEsQUFtQnpCOztrQkFBQSxBQUFlIiwiZmlsZSI6ImluZGV4LmpzP2VudHJ5Iiwic291cmNlUm9vdCI6Ii9Vc2Vycy9waGFjaGFyYS9EZXNrdG9wL1Byb2plY3QvMjAxNy9Ib21ld29yay9EYXRhYmFzZUh1bnNhIn0=
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL2luZGV4LmpzIl0sIm5hbWVzIjpbIkhlYWQiLCJNeUxheW91dCIsIk1haW4iLCJSZWFjdCIsIkNvbXBvbmVudCJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBSUEsQUFBTzs7OztBQUNQLEFBQU8sQUFBYzs7Ozs7OztBQUxyQjtBQUNBO0FBQ0E7O0lBTU0sQTs7Ozs7Ozs7Ozs7aUNBQ08sQUFDUDttQ0FDRSxjQUFBOzs4QkFBQTtnQ0FBQSxBQUNJO0FBREo7QUFBQSxhQUFBLGtCQUNJLEFBQUM7OzhCQUFEO2dDQUFBLEFBQ0k7QUFESjtBQUFBLCtCQUNJLEFBQUM7OzhCQUFEO2dDQUFBLEFBQ0k7QUFESjtBQUFBLCtCQUNJLGNBQUE7OzhCQUFBO2dDQUFBO0FBQUE7QUFBQSxlQUZSLEFBQ0ksQUFDSSxBQUVKLHNGQUFBLGNBQUE7OzhCQUFBO2dDQUFBO0FBQUE7QUFBQSxlQUVJOzs4QkFBQTtnQ0FGSixBQUVJLEFBQ0E7QUFEQTtBQUFBOzs4QkFDQTtnQ0FUZCxBQUNFLEFBQ0ksQUFJSSxBQUdJLEFBS2Y7QUFMZTtBQUFBOzs7OztFQVhELGdCQUFNLEEsQUFtQnpCOztrQkFBQSxBQUFlIiwiZmlsZSI6ImluZGV4LmpzP2VudHJ5Iiwic291cmNlUm9vdCI6Ii9Vc2Vycy9waGFjaGFyYS9EZXNrdG9wL1Byb2plY3QvMjAxNy9Ib21ld29yay9EYXRhYmFzZUh1bnNhIn0=

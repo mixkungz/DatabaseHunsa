@@ -4,108 +4,92 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
+var _taggedTemplateLiteral2 = require("babel-runtime/helpers/taggedTemplateLiteral");
+
+var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);
+
 var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
+
+var _styledComponents = require("styled-components");
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _jsxFileName = "/Users/phachara/Desktop/Project/2017/Homework/DatabaseHunsa/components/nav.js";
 
+var _templateObject = (0, _taggedTemplateLiteral3.default)(["\n    .awesome-border{\n        border-left:1px solid white;\n        border-right:1px solid white;\n    }\n"], ["\n    .awesome-border{\n        border-left:1px solid white;\n        border-right:1px solid white;\n    }\n"]);
+
+(0, _styledComponents.injectGlobal)(_templateObject);
+
 exports.default = function () {
     return _react2.default.createElement("div", {
         __source: {
             fileName: _jsxFileName,
-            lineNumber: 2
+            lineNumber: 12
         }
-    }, _react2.default.createElement("nav", { className: "navbar navbar-expand-lg navbar-light bg-light", __source: {
-            fileName: _jsxFileName,
-            lineNumber: 3
-        }
-    }, _react2.default.createElement("a", { className: "navbar-brand", href: "#", __source: {
-            fileName: _jsxFileName,
-            lineNumber: 4
-        }
-    }, "Navbar"), _react2.default.createElement("button", { className: "navbar-toggler", type: "button", "data-toggle": "collapse", "data-target": "#navbarSupportedContent", "aria-controls": "navbarSupportedContent", "aria-expanded": "false", "aria-label": "Toggle navigation", __source: {
-            fileName: _jsxFileName,
-            lineNumber: 5
-        }
-    }, _react2.default.createElement("span", { className: "navbar-toggler-icon", __source: {
-            fileName: _jsxFileName,
-            lineNumber: 6
-        }
-    })), _react2.default.createElement("div", { className: "collapse navbar-collapse", id: "navbarSupportedContent", __source: {
-            fileName: _jsxFileName,
-            lineNumber: 8
-        }
-    }, _react2.default.createElement("ul", { className: "navbar-nav mr-auto", __source: {
-            fileName: _jsxFileName,
-            lineNumber: 9
-        }
-    }, _react2.default.createElement("li", { className: "nav-item active", __source: {
-            fileName: _jsxFileName,
-            lineNumber: 10
-        }
-    }, _react2.default.createElement("a", { className: "nav-link", href: "#", __source: {
-            fileName: _jsxFileName,
-            lineNumber: 11
-        }
-    }, "Home ", _react2.default.createElement("span", { className: "sr-only", __source: {
-            fileName: _jsxFileName,
-            lineNumber: 11
-        }
-    }, "(current)"))), _react2.default.createElement("li", { className: "nav-item", __source: {
+    }, _react2.default.createElement("nav", { className: "bg-secondary", __source: {
             fileName: _jsxFileName,
             lineNumber: 13
         }
-    }, _react2.default.createElement("a", { className: "nav-link", href: "#", __source: {
+    }, _react2.default.createElement("div", { className: "container", __source: {
             fileName: _jsxFileName,
             lineNumber: 14
         }
-    }, "Link")), _react2.default.createElement("li", { className: "nav-item dropdown", __source: {
+    }, _react2.default.createElement("div", { className: "row", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 15
+        }
+    }, _react2.default.createElement("div", { className: "col-5 ml-auto my-2", __source: {
             fileName: _jsxFileName,
             lineNumber: 16
         }
-    }, _react2.default.createElement("a", { className: "nav-link dropdown-toggle", href: "#", id: "navbarDropdown", role: "button", "data-toggle": "dropdown", "aria-haspopup": "true", "aria-expanded": "false", __source: {
+    }, _react2.default.createElement("ul", { "class": "list-inline text-white", __source: {
             fileName: _jsxFileName,
             lineNumber: 17
         }
-    }, "Dropdown"), _react2.default.createElement("div", { className: "dropdown-menu", "aria-labelledby": "navbarDropdown", __source: {
+    }, _react2.default.createElement("li", { "class": "list-inline-item px-3", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 18
+        }
+    }, "\u0E15\u0E30\u0E01\u0E23\u0E49\u0E32"), _react2.default.createElement("li", { "class": "list-inline-item px-3 awesome-border", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 19
+        }
+    }, "\u0E25\u0E07\u0E17\u0E30\u0E40\u0E1A\u0E35\u0E22\u0E19"), _react2.default.createElement("li", { "class": "list-inline-item px-3", __source: {
             fileName: _jsxFileName,
             lineNumber: 20
         }
-    }, _react2.default.createElement("a", { className: "dropdown-item", href: "#", __source: {
-            fileName: _jsxFileName,
-            lineNumber: 21
-        }
-    }, "Action"), _react2.default.createElement("a", { className: "dropdown-item", href: "#", __source: {
-            fileName: _jsxFileName,
-            lineNumber: 22
-        }
-    }, "Another action"), _react2.default.createElement("div", { className: "dropdown-divider", __source: {
-            fileName: _jsxFileName,
-            lineNumber: 23
-        }
-    }), _react2.default.createElement("a", { className: "dropdown-item", href: "#", __source: {
+    }, "\u0E40\u0E02\u0E49\u0E32\u0E2A\u0E39\u0E48\u0E23\u0E30\u0E1A\u0E1A")))), _react2.default.createElement("div", { className: "row", __source: {
             fileName: _jsxFileName,
             lineNumber: 24
         }
-    }, "Something else here"))), _react2.default.createElement("li", { className: "nav-item", __source: {
+    }, _react2.default.createElement("div", { className: "col-2 my-2", __source: {
             fileName: _jsxFileName,
-            lineNumber: 27
+            lineNumber: 25
         }
-    }, _react2.default.createElement("a", { className: "nav-link disabled", href: "#", __source: {
+    }, _react2.default.createElement("h1", { "class": "navbar-brand text-white", href: "#", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 26
+        }
+    }, "Shopy")), _react2.default.createElement("div", { className: "col-8 my-2", __source: {
             fileName: _jsxFileName,
             lineNumber: 28
         }
-    }, "Disabled"))), _react2.default.createElement("form", { className: "form-inline my-2 my-lg-0", __source: {
+    }, _react2.default.createElement("input", { className: "form-control", type: "search", placeholder: "Search", "aria-label": "Search", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 29
+        }
+    })), _react2.default.createElement("div", { className: "col-2 my-2", __source: {
             fileName: _jsxFileName,
             lineNumber: 31
         }
-    }, _react2.default.createElement("button", { className: "btn btn-outline-success my-2 my-sm-0", type: "submit", __source: {
+    }, _react2.default.createElement("button", { className: "btn btn-outline-light", type: "submit", __source: {
             fileName: _jsxFileName,
             lineNumber: 32
         }
-    }, "Search")))));
+    }, "Search"))))));
 };
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvbmF2LmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7OztBQUFBOzs7Ozs7OztrQkFBZSxZQUFBOzJCQUNmLGNBQUE7O3NCQUFBO3dCQUFBLEFBQ0k7QUFESjtBQUFBLEtBQUEsa0JBQ0ksY0FBQSxTQUFLLFdBQUwsQUFBZTtzQkFBZjt3QkFBQSxBQUNJO0FBREo7dUJBQ0ksY0FBQSxPQUFHLFdBQUgsQUFBYSxnQkFBZSxNQUE1QixBQUFpQztzQkFBakM7d0JBQUE7QUFBQTtPQURKLEFBQ0ksQUFDQSwyQkFBQSxjQUFBLFlBQVEsV0FBUixBQUFrQixrQkFBaUIsTUFBbkMsQUFBd0MsVUFBUyxlQUFqRCxBQUE2RCxZQUFXLGVBQXhFLEFBQW9GLDJCQUEwQixpQkFBOUcsQUFBNEgsMEJBQXlCLGlCQUFySixBQUFtSyxTQUFRLGNBQTNLLEFBQXNMO3NCQUF0TDt3QkFBQSxBQUNJO0FBREo7K0NBQ1UsV0FBTixBQUFnQjtzQkFBaEI7d0JBSFIsQUFFSSxBQUNJLEFBRUo7QUFGSTt5QkFFSixjQUFBLFNBQUssV0FBTCxBQUFlLDRCQUEyQixJQUExQyxBQUE2QztzQkFBN0M7d0JBQUEsQUFDSTtBQURKO3VCQUNJLGNBQUEsUUFBSSxXQUFKLEFBQWM7c0JBQWQ7d0JBQUEsQUFDQTtBQURBO3VCQUNBLGNBQUEsUUFBSSxXQUFKLEFBQWM7c0JBQWQ7d0JBQUEsQUFDSTtBQURKO3VCQUNJLGNBQUEsT0FBRyxXQUFILEFBQWEsWUFBVyxNQUF4QixBQUE2QjtzQkFBN0I7d0JBQUE7QUFBQTtPQUFzQyx5QkFBQSxjQUFBLFVBQU0sV0FBTixBQUFnQjtzQkFBaEI7d0JBQUE7QUFBQTtPQUYxQyxBQUNBLEFBQ0ksQUFBc0MsQUFFMUMsZ0NBQUEsY0FBQSxRQUFJLFdBQUosQUFBYztzQkFBZDt3QkFBQSxBQUNJO0FBREo7dUJBQ0ksY0FBQSxPQUFHLFdBQUgsQUFBYSxZQUFXLE1BQXhCLEFBQTZCO3NCQUE3Qjt3QkFBQTtBQUFBO09BTEosQUFJQSxBQUNJLEFBRUosMEJBQUEsY0FBQSxRQUFJLFdBQUosQUFBYztzQkFBZDt3QkFBQSxBQUNJO0FBREo7dUJBQ0ksY0FBQSxPQUFHLFdBQUgsQUFBYSw0QkFBMkIsTUFBeEMsQUFBNkMsS0FBSSxJQUFqRCxBQUFvRCxrQkFBaUIsTUFBckUsQUFBMEUsVUFBUyxlQUFuRixBQUErRixZQUFXLGlCQUExRyxBQUF3SCxRQUFPLGlCQUEvSCxBQUE2STtzQkFBN0k7d0JBQUE7QUFBQTtPQURKLEFBQ0ksQUFHQSw2QkFBQSxjQUFBLFNBQUssV0FBTCxBQUFlLGlCQUFnQixtQkFBL0IsQUFBK0M7c0JBQS9DO3dCQUFBLEFBQ0E7QUFEQTt1QkFDQSxjQUFBLE9BQUcsV0FBSCxBQUFhLGlCQUFnQixNQUE3QixBQUFrQztzQkFBbEM7d0JBQUE7QUFBQTtPQURBLEFBQ0EsQUFDQSwyQkFBQSxjQUFBLE9BQUcsV0FBSCxBQUFhLGlCQUFnQixNQUE3QixBQUFrQztzQkFBbEM7d0JBQUE7QUFBQTtPQUZBLEFBRUEsQUFDQSwwREFBSyxXQUFMLEFBQWU7c0JBQWY7d0JBSEEsQUFHQSxBQUNBO0FBREE7d0JBQ0EsY0FBQSxPQUFHLFdBQUgsQUFBYSxpQkFBZ0IsTUFBN0IsQUFBa0M7c0JBQWxDO3dCQUFBO0FBQUE7T0FmSixBQU9BLEFBSUksQUFJQSxBQUdKLDBDQUFBLGNBQUEsUUFBSSxXQUFKLEFBQWM7c0JBQWQ7d0JBQUEsQUFDSTtBQURKO3VCQUNJLGNBQUEsT0FBRyxXQUFILEFBQWEscUJBQW9CLE1BQWpDLEFBQXNDO3NCQUF0Qzt3QkFBQTtBQUFBO09BcEJSLEFBQ0ksQUFrQkEsQUFDSSxBQUdKLCtCQUFBLGNBQUEsVUFBTSxXQUFOLEFBQWdCO3NCQUFoQjt3QkFBQSxBQUNBO0FBREE7dUJBQ0EsY0FBQSxZQUFRLFdBQVIsQUFBa0Isd0NBQXVDLE1BQXpELEFBQThEO3NCQUE5RDt3QkFBQTtBQUFBO09BL0JHLEFBQ2YsQUFDSSxBQUtJLEFBdUJJLEFBQ0E7QUEvQloiLCJmaWxlIjoibmF2LmpzIiwic291cmNlUm9vdCI6Ii9Vc2Vycy9waGFjaGFyYS9EZXNrdG9wL1Byb2plY3QvMjAxNy9Ib21ld29yay9EYXRhYmFzZUh1bnNhIn0=
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvbmF2LmpzIl0sIm5hbWVzIjpbInN0eWxlZCIsImluamVjdEdsb2JhbCJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7QUFBQSxBQUFPLEFBQVU7Ozs7Ozs7Ozs7QUFDakIsb0NBU0E7O2tCQUFlLFlBQUE7MkJBQ2YsY0FBQTs7c0JBQUE7d0JBQUEsQUFDSTtBQURKO0FBQUEsS0FBQSxrQkFDSSxjQUFBLFNBQUssV0FBTCxBQUFlO3NCQUFmO3dCQUFBLEFBQ0k7QUFESjt1QkFDSSxjQUFBLFNBQUssV0FBTCxBQUFlO3NCQUFmO3dCQUFBLEFBQ0k7QUFESjt1QkFDSSxjQUFBLFNBQUssV0FBTCxBQUFlO3NCQUFmO3dCQUFBLEFBQ0k7QUFESjt1QkFDSSxjQUFBLFNBQUssV0FBTCxBQUFlO3NCQUFmO3dCQUFBLEFBQ0k7QUFESjt1QkFDSSxjQUFBLFFBQUksU0FBSixBQUFVO3NCQUFWO3dCQUFBLEFBQ0k7QUFESjt1QkFDSSxjQUFBLFFBQUksU0FBSixBQUFVO3NCQUFWO3dCQUFBO0FBQUE7T0FESixBQUNJLEFBQ0EseURBQUEsY0FBQSxRQUFJLFNBQUosQUFBVTtzQkFBVjt3QkFBQTtBQUFBO09BRkosQUFFSSxBQUNBLDJFQUFBLGNBQUEsUUFBSSxTQUFKLEFBQVU7c0JBQVY7d0JBQUE7QUFBQTtPQU5oQixBQUNJLEFBQ0ksQUFDSSxBQUdJLEFBSVosMEZBQUEsY0FBQSxTQUFLLFdBQUwsQUFBZTtzQkFBZjt3QkFBQSxBQUNJO0FBREo7dUJBQ0ksY0FBQSxTQUFLLFdBQUwsQUFBZTtzQkFBZjt3QkFBQSxBQUNJO0FBREo7dUJBQ0ksY0FBQSxRQUFJLFNBQUosQUFBVSwyQkFBMEIsTUFBcEMsQUFBeUM7c0JBQXpDO3dCQUFBO0FBQUE7T0FGUixBQUNJLEFBQ0ksQUFFSiwyQkFBQSxjQUFBLFNBQUssV0FBTCxBQUFlO3NCQUFmO3dCQUFBLEFBQ0k7QUFESjtnREFDVyxXQUFQLEFBQWlCLGdCQUFlLE1BQWhDLEFBQXFDLFVBQVMsYUFBOUMsQUFBMEQsVUFBUyxjQUFuRSxBQUE4RTtzQkFBOUU7d0JBTFIsQUFJSSxBQUNJLEFBRUo7QUFGSTt5QkFFSixjQUFBLFNBQUssV0FBTCxBQUFlO3NCQUFmO3dCQUFBLEFBQ0k7QUFESjt1QkFDSSxjQUFBLFlBQVEsV0FBUixBQUFrQix5QkFBd0IsTUFBMUMsQUFBK0M7c0JBQS9DO3dCQUFBO0FBQUE7T0FyQkwsQUFDZixBQUNJLEFBQ0ksQUFVSSxBQU9JLEFBQ0k7QUFyQnBCIiwiZmlsZSI6Im5hdi5qcyIsInNvdXJjZVJvb3QiOiIvVXNlcnMvcGhhY2hhcmEvRGVza3RvcC9Qcm9qZWN0LzIwMTcvSG9tZXdvcmsvRGF0YWJhc2VIdW5zYSJ9
