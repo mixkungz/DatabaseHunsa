@@ -1,11 +1,8 @@
-// import { Layout, Menu, Breadcrumb } from 'antd';
-// const { Header, Content, Footer } = Layout;
-// import MyNav from '../components/nav'
-
 import Head from 'next/head';
-import MyLayout from '../components/layout';
-import styled , { injectGlobal } from 'styled-components';
+import MyLayout from '../components/layout'
+import styled , { injectGlobal } from 'styled-components'
 import Slider from 'react-slick'
+import Carousel from '../components/carousel'
 
 injectGlobal`
 .card{
@@ -17,7 +14,7 @@ injectGlobal`
 }
 `
 class Main extends React.Component {
-
+    
 
     render() {
         const settings = {
@@ -33,6 +30,7 @@ class Main extends React.Component {
                 <Head>
                     <title>DatabaseHunsa | หน้าหลัก</title>
                 </Head>
+                <Carousel />
                 <div>
                     <div className="container mt-3">
                         <div className="row">

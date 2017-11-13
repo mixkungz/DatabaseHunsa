@@ -1,6 +1,5 @@
 import styled , {injectGlobal} from 'styled-components'
 import SweetAlert from 'sweetalert2-react'
-// import 'sweetalert2-react/src/sweetalert2.css';
 
 
 injectGlobal`
@@ -27,6 +26,11 @@ injectGlobal`
 
 
 export default class extends React.Component{
+    constructor(props) {
+        super(props);
+        this.state = { show: false };
+    }
+
     render(){
         return(
                 <div>
@@ -72,7 +76,6 @@ export default class extends React.Component{
                             </div>
                         </div>
                     </nav>
-
                     <div className="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div className="modal-dialog" role="document">
                             <div className="modal-content">
