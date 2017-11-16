@@ -95,8 +95,9 @@ const AdminLayout = (props) =>(
 
                     <div className="">
                         <div className="brand inline m-l-10">
-                            <img src="/static/admin/assets/img/logo.png" alt="logo" data-src="/static/admin/assets/img/logo.png" data-src-retina="/static/admin/assets/img/logo_2x.png" width="78"
-                                height="22" />
+                            นี่โลโก้ไง
+                            {/* <img src="/static/admin/assets/img/logo.png" alt="logo" data-src="/static/admin/assets/img/logo.png" data-src-retina="/static/admin/assets/img/logo_2x.png" width="78"
+                                height="22" /> */}
                         </div>
 
                     </div>
