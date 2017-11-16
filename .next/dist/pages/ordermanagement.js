@@ -4,10 +4,6 @@ Object.defineProperty(exports, "__esModule", {
 				value: true
 });
 
-var _taggedTemplateLiteral2 = require('babel-runtime/helpers/taggedTemplateLiteral');
-
-var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);
-
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -32,170 +28,164 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var _jsxFileName = '/Users/phachara/Desktop/Project/2017/Homework/DatabaseHunsa/pages/ordermanagement.js?entry';
 
-var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n    .img-thumbnail-table{\n        max-width:100px;\n    }\n'], ['\n    .img-thumbnail-table{\n        max-width:100px;\n    }\n']);
 
-(0, _styledComponents.injectGlobal)(_templateObject);
 var ProductManagement = function ProductManagement() {
 				return _react2.default.createElement('div', {
 								__source: {
 												fileName: _jsxFileName,
-												lineNumber: 12
+												lineNumber: 7
 								}
 				}, _react2.default.createElement(_adminlayout2.default, {
 								__source: {
 												fileName: _jsxFileName,
-												lineNumber: 13
+												lineNumber: 8
 								}
 				}, _react2.default.createElement('div', { className: 'row', __source: {
 												fileName: _jsxFileName,
-												lineNumber: 14
+												lineNumber: 9
 								}
 				}, _react2.default.createElement('div', { className: 'col-12', __source: {
 												fileName: _jsxFileName,
-												lineNumber: 15
+												lineNumber: 10
 								}
 				}, _react2.default.createElement(_portlet2.default, {
 								__source: {
 												fileName: _jsxFileName,
-												lineNumber: 16
+												lineNumber: 11
 								}
 				}, _react2.default.createElement('div', { className: 'd-flex', __source: {
 												fileName: _jsxFileName,
-												lineNumber: 17
+												lineNumber: 12
 								}
 				}, _react2.default.createElement('div', { className: 'mr-auto', __source: {
 												fileName: _jsxFileName,
-												lineNumber: 18
+												lineNumber: 13
 								}
 				}, _react2.default.createElement('h3', { className: '', __source: {
 												fileName: _jsxFileName,
-												lineNumber: 19
+												lineNumber: 14
 								}
 				}, 'Order Management'))), _react2.default.createElement('hr', {
 								__source: {
 												fileName: _jsxFileName,
-												lineNumber: 22
+												lineNumber: 17
 								}
 				}), _react2.default.createElement('table', { className: 'table table-hover table-responsive-block', id: 'tableWithSearch', __source: {
 												fileName: _jsxFileName,
-												lineNumber: 23
+												lineNumber: 18
 								}
 				}, _react2.default.createElement('thead', {
 								__source: {
 												fileName: _jsxFileName,
-												lineNumber: 24
+												lineNumber: 19
 								}
 				}, _react2.default.createElement('tr', {
 								__source: {
 												fileName: _jsxFileName,
-												lineNumber: 25
+												lineNumber: 20
 								}
 				}, _react2.default.createElement('th', {
 								__source: {
 												fileName: _jsxFileName,
-												lineNumber: 26
+												lineNumber: 21
 								}
 				}, '#'), _react2.default.createElement('th', {
 								__source: {
 												fileName: _jsxFileName,
-												lineNumber: 27
+												lineNumber: 22
 								}
-				}, 'Thumbnail'), _react2.default.createElement('th', {
+				}, 'Order Number'), _react2.default.createElement('th', {
 								__source: {
 												fileName: _jsxFileName,
-												lineNumber: 28
+												lineNumber: 23
 								}
-				}, 'Category'), _react2.default.createElement('th', {
+				}, 'Customer'), _react2.default.createElement('th', {
 								__source: {
 												fileName: _jsxFileName,
-												lineNumber: 29
+												lineNumber: 24
 								}
-				}, 'Product name'), _react2.default.createElement('th', {
+				}, 'Price'), _react2.default.createElement('th', {
 								__source: {
 												fileName: _jsxFileName,
-												lineNumber: 30
+												lineNumber: 25
 								}
-				}, 'Stock'), _react2.default.createElement('th', {
+				}, 'Order Detail'), _react2.default.createElement('th', {
 								__source: {
 												fileName: _jsxFileName,
-												lineNumber: 31
+												lineNumber: 26
 								}
 				}, 'Action'))), _react2.default.createElement('tbody', {
 								__source: {
 												fileName: _jsxFileName,
-												lineNumber: 34
+												lineNumber: 29
 								}
 				}, _react2.default.createElement('tr', {
 								__source: {
 												fileName: _jsxFileName,
-												lineNumber: 35
+												lineNumber: 30
 								}
 				}, _react2.default.createElement('td', { className: 'v-align-middle semi-bold', __source: {
 												fileName: _jsxFileName,
-												lineNumber: 36
+												lineNumber: 31
 								}
 				}, _react2.default.createElement('p', {
 								__source: {
 												fileName: _jsxFileName,
-												lineNumber: 37
+												lineNumber: 32
 								}
 				}, '1')), _react2.default.createElement('td', { className: 'v-align-middle', __source: {
 												fileName: _jsxFileName,
-												lineNumber: 39
+												lineNumber: 34
 								}
-				}, _react2.default.createElement('img', { src: '/static/img/product/cosmetic.jpg', className: 'img-thumbnail img-thumbnail-table', __source: {
+				}, _react2.default.createElement('p', {
+								__source: {
+												fileName: _jsxFileName,
+												lineNumber: 35
+								}
+				}, 'OR123910')), _react2.default.createElement('td', { className: 'v-align-middle', __source: {
+												fileName: _jsxFileName,
+												lineNumber: 37
+								}
+				}, _react2.default.createElement('p', {
+								__source: {
+												fileName: _jsxFileName,
+												lineNumber: 38
+								}
+				}, 'Monkey D Luffy')), _react2.default.createElement('td', { className: 'v-align-middle', __source: {
 												fileName: _jsxFileName,
 												lineNumber: 40
 								}
-				})), _react2.default.createElement('td', { className: 'v-align-middle', __source: {
-												fileName: _jsxFileName,
-												lineNumber: 42
-								}
 				}, _react2.default.createElement('p', {
 								__source: {
+												fileName: _jsxFileName,
+												lineNumber: 41
+								}
+				}, '23,123')), _react2.default.createElement('td', { className: 'v-align-middle', __source: {
 												fileName: _jsxFileName,
 												lineNumber: 43
 								}
-				}, 'Face')), _react2.default.createElement('td', { className: 'v-align-middle', __source: {
-												fileName: _jsxFileName,
-												lineNumber: 45
-								}
-				}, _react2.default.createElement('p', {
-								__source: {
-												fileName: _jsxFileName,
-												lineNumber: 46
-								}
-				}, 'UCANBE Brand 8 Colors Moisturizing Smooth Lipsticks')), _react2.default.createElement('td', { className: 'v-align-middle', __source: {
-												fileName: _jsxFileName,
-												lineNumber: 48
-								}
-				}, _react2.default.createElement('p', {
-								__source: {
-												fileName: _jsxFileName,
-												lineNumber: 49
-								}
-				}, '32')), _react2.default.createElement('td', { className: 'v-align-middle', __source: {
-												fileName: _jsxFileName,
-												lineNumber: 51
-								}
 				}, _react2.default.createElement('button', { className: 'btn btn-primary m-b-10', type: 'button', __source: {
 												fileName: _jsxFileName,
-												lineNumber: 52
+												lineNumber: 44
 								}
 				}, _react2.default.createElement('i', { className: 'pg-form', __source: {
 												fileName: _jsxFileName,
-												lineNumber: 52
+												lineNumber: 44
 								}
-				})), _react2.default.createElement('button', { className: 'btn btn-danger m-b-10 mx-1', type: 'button', __source: {
+				}))), _react2.default.createElement('td', { className: 'v-align-middle', __source: {
 												fileName: _jsxFileName,
-												lineNumber: 53
+												lineNumber: 46
+								}
+				}, _react2.default.createElement('button', { className: 'btn btn-danger m-b-10 mx-1', type: 'button', __source: {
+												fileName: _jsxFileName,
+												lineNumber: 47
 								}
 				}, _react2.default.createElement('i', { className: 'pg-trash', __source: {
 												fileName: _jsxFileName,
-												lineNumber: 53
+												lineNumber: 47
 								}
 				})))))))))));
 };
 
 exports.default = ProductManagement;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL29yZGVybWFuYWdlbWVudC5qcyJdLCJuYW1lcyI6WyJBZG1pbkxheW91dCIsIlBvcnRsZXQiLCJDYXJkIiwic3R5bGVkIiwiaW5qZWN0R2xvYmFsIiwiUHJvZHVjdE1hbmFnZW1lbnQiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7O0FBQUEsQUFBTyxBQUFpQjs7OztBQUN4QixBQUFPLEFBQWE7Ozs7QUFDcEIsQUFBTyxBQUFVOzs7O0FBQ2pCLEFBQU8sQUFBVzs7Ozs7Ozs7OztBQUVsQjtBQUtBLElBQU0sb0JBQW9CLFNBQXBCLEFBQW9CLG9CQUFBOzJCQUN0QixjQUFBOztzQkFBQTt3QkFBQSxBQUNJO0FBREo7QUFBQSxLQUFBLGtCQUNJLEFBQUM7O3NCQUFEO3dCQUFBLEFBQ0k7QUFESjtBQUFBLHVCQUNJLGNBQUEsU0FBSyxXQUFMLEFBQWU7c0JBQWY7d0JBQUEsQUFDSTtBQURKO3VCQUNJLGNBQUEsU0FBSyxXQUFMLEFBQWU7c0JBQWY7d0JBQUEsQUFDSTtBQURKO3VCQUNJLEFBQUM7O3NCQUFEO3dCQUFBLEFBQ0k7QUFESjtBQUFBLHVCQUNJLGNBQUEsU0FBSyxXQUFMLEFBQWU7c0JBQWY7d0JBQUEsQUFDSTtBQURKO3VCQUNJLGNBQUEsU0FBSyxXQUFMLEFBQWU7c0JBQWY7d0JBQUEsQUFDSTtBQURKO3VCQUNJLGNBQUEsUUFBSSxXQUFKLEFBQWM7c0JBQWQ7d0JBQUE7QUFBQTtPQUhaLEFBQ0ksQUFDSSxBQUNJLEFBR1I7O3NCQUFBO3dCQU5KLEFBTUksQUFDQTtBQURBO0FBQUEsd0JBQ0EsY0FBQSxXQUFPLFdBQVAsQUFBaUIsNENBQTJDLElBQTVELEFBQStEO3NCQUEvRDt3QkFBQSxBQUNoQjtBQURnQjt1QkFDaEIsY0FBQTs7c0JBQUE7d0JBQUEsQUFDQztBQUREO0FBQUEsdUJBQ0MsY0FBQTs7c0JBQUE7d0JBQUEsQUFDQztBQUREO0FBQUEsdUJBQ0MsY0FBQTs7c0JBQUE7d0JBQUE7QUFBQTtBQUFBLE9BREQsQUFDQyxBQUNBLHNCQUFBLGNBQUE7O3NCQUFBO3dCQUFBO0FBQUE7QUFBQSxPQUZELEFBRUMsQUFDQSw4QkFBQSxjQUFBOztzQkFBQTt3QkFBQTtBQUFBO0FBQUEsT0FIRCxBQUdDLEFBQ0EsNkJBQUEsY0FBQTs7c0JBQUE7d0JBQUE7QUFBQTtBQUFBLE9BSkQsQUFJQyxBQUNBLGlDQUFBLGNBQUE7O3NCQUFBO3dCQUFBO0FBQUE7QUFBQSxPQUxELEFBS0MsQUFDQSwwQkFBQSxjQUFBOztzQkFBQTt3QkFBQTtBQUFBO0FBQUEsT0FSYyxBQUNoQixBQUNDLEFBTUMsQUFHRiw2QkFBQSxjQUFBOztzQkFBQTt3QkFBQSxBQUNDO0FBREQ7QUFBQSx1QkFDQyxjQUFBOztzQkFBQTt3QkFBQSxBQUNDO0FBREQ7QUFBQSx1QkFDQyxjQUFBLFFBQUksV0FBSixBQUFjO3NCQUFkO3dCQUFBLEFBQ0M7QUFERDt1QkFDQyxjQUFBOztzQkFBQTt3QkFBQTtBQUFBO0FBQUEsT0FGRixBQUNDLEFBQ0MsQUFFRCx1QkFBQSxjQUFBLFFBQUksV0FBSixBQUFjO3NCQUFkO3dCQUFBLEFBQ2tDO0FBRGxDOzhDQUN1QyxLQUFMLEFBQVMsb0NBQW1DLFdBQTVDLEFBQXNEO3NCQUF0RDt3QkFMbkMsQUFJQyxBQUNrQyxBQUVsQztBQUZrQzt5QkFFbEMsY0FBQSxRQUFJLFdBQUosQUFBYztzQkFBZDt3QkFBQSxBQUNrQztBQURsQzt1QkFDa0MsY0FBQTs7c0JBQUE7d0JBQUE7QUFBQTtBQUFBLE9BUm5DLEFBT0MsQUFDa0MsQUFFbEMsMEJBQUEsY0FBQSxRQUFJLFdBQUosQUFBYztzQkFBZDt3QkFBQSxBQUNrQztBQURsQzt1QkFDa0MsY0FBQTs7c0JBQUE7d0JBQUE7QUFBQTtBQUFBLE9BWG5DLEFBVUMsQUFDa0MsQUFFbEMseUVBQUEsY0FBQSxRQUFJLFdBQUosQUFBYztzQkFBZDt3QkFBQSxBQUNrQztBQURsQzt1QkFDa0MsY0FBQTs7c0JBQUE7d0JBQUE7QUFBQTtBQUFBLE9BZG5DLEFBYUMsQUFDa0MsQUFFSix3QkFBQSxjQUFBLFFBQUksV0FBSixBQUFjO3NCQUFkO3dCQUFBLEFBQ0k7QUFESjt1QkFDSSxjQUFBLFlBQVEsV0FBUixBQUFrQiwwQkFBeUIsTUFBM0MsQUFBZ0Q7c0JBQWhEO3dCQUFBLEFBQXlEO0FBQXpEOzRDQUE0RCxXQUFILEFBQWE7c0JBQWI7d0JBRDdELEFBQ0ksQUFBeUQsQUFDekQ7QUFEeUQ7eUJBQ3pELGNBQUEsWUFBUSxXQUFSLEFBQWtCLDhCQUE2QixNQUEvQyxBQUFvRDtzQkFBcEQ7d0JBQUEsQUFBNkQ7QUFBN0Q7NENBQWdFLFdBQUgsQUFBYTtzQkFBYjt3QkExQy9FLEFBQ3RCLEFBQ0ksQUFDSSxBQUNJLEFBQ0ksQUFPSSxBQVdoQixBQUNDLEFBZ0IrQixBQUVJLEFBQTZEO0FBQUE7O0FBMUN6RyxBQXVEQTs7a0JBQUEsQUFBZSIsImZpbGUiOiJvcmRlcm1hbmFnZW1lbnQuanM/ZW50cnkiLCJzb3VyY2VSb290IjoiL1VzZXJzL3BoYWNoYXJhL0Rlc2t0b3AvUHJvamVjdC8yMDE3L0hvbWV3b3JrL0RhdGFiYXNlSHVuc2EifQ==
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL29yZGVybWFuYWdlbWVudC5qcyJdLCJuYW1lcyI6WyJBZG1pbkxheW91dCIsIlBvcnRsZXQiLCJDYXJkIiwic3R5bGVkIiwiaW5qZWN0R2xvYmFsIiwiUHJvZHVjdE1hbmFnZW1lbnQiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7QUFBQSxBQUFPLEFBQWlCOzs7O0FBQ3hCLEFBQU8sQUFBYTs7OztBQUNwQixBQUFPLEFBQVU7Ozs7QUFDakIsQUFBTyxBQUFXOzs7Ozs7Ozs7QUFFbEIsSUFBTSxvQkFBb0IsU0FBcEIsQUFBb0Isb0JBQUE7MkJBQ3RCLGNBQUE7O3NCQUFBO3dCQUFBLEFBQ0k7QUFESjtBQUFBLEtBQUEsa0JBQ0ksQUFBQzs7c0JBQUQ7d0JBQUEsQUFDSTtBQURKO0FBQUEsdUJBQ0ksY0FBQSxTQUFLLFdBQUwsQUFBZTtzQkFBZjt3QkFBQSxBQUNJO0FBREo7dUJBQ0ksY0FBQSxTQUFLLFdBQUwsQUFBZTtzQkFBZjt3QkFBQSxBQUNJO0FBREo7dUJBQ0ksQUFBQzs7c0JBQUQ7d0JBQUEsQUFDSTtBQURKO0FBQUEsdUJBQ0ksY0FBQSxTQUFLLFdBQUwsQUFBZTtzQkFBZjt3QkFBQSxBQUNJO0FBREo7dUJBQ0ksY0FBQSxTQUFLLFdBQUwsQUFBZTtzQkFBZjt3QkFBQSxBQUNJO0FBREo7dUJBQ0ksY0FBQSxRQUFJLFdBQUosQUFBYztzQkFBZDt3QkFBQTtBQUFBO09BSFosQUFDSSxBQUNJLEFBQ0ksQUFHUjs7c0JBQUE7d0JBTkosQUFNSSxBQUNBO0FBREE7QUFBQSx3QkFDQSxjQUFBLFdBQU8sV0FBUCxBQUFpQiw0Q0FBMkMsSUFBNUQsQUFBK0Q7c0JBQS9EO3dCQUFBLEFBQ2hCO0FBRGdCO3VCQUNoQixjQUFBOztzQkFBQTt3QkFBQSxBQUNDO0FBREQ7QUFBQSx1QkFDQyxjQUFBOztzQkFBQTt3QkFBQSxBQUNDO0FBREQ7QUFBQSx1QkFDQyxjQUFBOztzQkFBQTt3QkFBQTtBQUFBO0FBQUEsT0FERCxBQUNDLEFBQ0Esc0JBQUEsY0FBQTs7c0JBQUE7d0JBQUE7QUFBQTtBQUFBLE9BRkQsQUFFQyxBQUNBLGlDQUFBLGNBQUE7O3NCQUFBO3dCQUFBO0FBQUE7QUFBQSxPQUhELEFBR0MsQUFDQSw2QkFBQSxjQUFBOztzQkFBQTt3QkFBQTtBQUFBO0FBQUEsT0FKRCxBQUlDLEFBQ0EsMEJBQUEsY0FBQTs7c0JBQUE7d0JBQUE7QUFBQTtBQUFBLE9BTEQsQUFLQyxBQUNBLGlDQUFBLGNBQUE7O3NCQUFBO3dCQUFBO0FBQUE7QUFBQSxPQVJjLEFBQ2hCLEFBQ0MsQUFNQyxBQUdGLDZCQUFBLGNBQUE7O3NCQUFBO3dCQUFBLEFBQ0M7QUFERDtBQUFBLHVCQUNDLGNBQUE7O3NCQUFBO3dCQUFBLEFBQ0M7QUFERDtBQUFBLHVCQUNDLGNBQUEsUUFBSSxXQUFKLEFBQWM7c0JBQWQ7d0JBQUEsQUFDQztBQUREO3VCQUNDLGNBQUE7O3NCQUFBO3dCQUFBO0FBQUE7QUFBQSxPQUZGLEFBQ0MsQUFDQyxBQUVELHVCQUFBLGNBQUEsUUFBSSxXQUFKLEFBQWM7c0JBQWQ7d0JBQUEsQUFDa0M7QUFEbEM7dUJBQ2tDLGNBQUE7O3NCQUFBO3dCQUFBO0FBQUE7QUFBQSxPQUxuQyxBQUlDLEFBQ2tDLEFBRWxDLDhCQUFBLGNBQUEsUUFBSSxXQUFKLEFBQWM7c0JBQWQ7d0JBQUEsQUFDa0M7QUFEbEM7dUJBQ2tDLGNBQUE7O3NCQUFBO3dCQUFBO0FBQUE7QUFBQSxPQVJuQyxBQU9DLEFBQ2tDLEFBRWxDLG9DQUFBLGNBQUEsUUFBSSxXQUFKLEFBQWM7c0JBQWQ7d0JBQUEsQUFDa0M7QUFEbEM7dUJBQ2tDLGNBQUE7O3NCQUFBO3dCQUFBO0FBQUE7QUFBQSxPQVhuQyxBQVVDLEFBQ2tDLEFBRWxDLDRCQUFBLGNBQUEsUUFBSSxXQUFKLEFBQWM7c0JBQWQ7d0JBQUEsQUFDa0M7QUFEbEM7dUJBQ2tDLGNBQUEsWUFBUSxXQUFSLEFBQWtCLDBCQUF5QixNQUEzQyxBQUFnRDtzQkFBaEQ7d0JBQUEsQUFBeUQ7QUFBekQ7NENBQTRELFdBQUgsQUFBYTtzQkFBYjt3QkFkNUYsQUFhQyxBQUNrQyxBQUF5RCxBQUU3RDtBQUY2RDswQkFFN0QsY0FBQSxRQUFJLFdBQUosQUFBYztzQkFBZDt3QkFBQSxBQUNJO0FBREo7dUJBQ0ksY0FBQSxZQUFRLFdBQVIsQUFBa0IsOEJBQTZCLE1BQS9DLEFBQW9EO3NCQUFwRDt3QkFBQSxBQUE2RDtBQUE3RDs0Q0FBZ0UsV0FBSCxBQUFhO3NCQUFiO3dCQXpDL0UsQUFDdEIsQUFDSSxBQUNJLEFBQ0ksQUFDSSxBQU9JLEFBV2hCLEFBQ0MsQUFnQitCLEFBQ0ksQUFBNkQ7QUFBQTs7QUF6Q3pHLEFBc0RBOztrQkFBQSxBQUFlIiwiZmlsZSI6Im9yZGVybWFuYWdlbWVudC5qcz9lbnRyeSIsInNvdXJjZVJvb3QiOiIvVXNlcnMvcGhhY2hhcmEvRGVza3RvcC9Qcm9qZWN0LzIwMTcvSG9tZXdvcmsvRGF0YWJhc2VIdW5zYSJ9
