@@ -1,5 +1,6 @@
 import Head from './adminhead'
 import styled , { injectGlobal } from 'styled-components'
+import Link from 'next/link'
 
 const TopicFont = styled.p`
     color: white;
@@ -17,32 +18,7 @@ const AdminLayout = (props) =>(
         <Head />
         <body className="fixed-header dashboard menu-pin menu-behind">
             <nav className="page-sidebar" data-pages="sidebar">
-                <div className="sidebar-overlay-slide from-top" id="appMenu">
-                    <div className="row">
-                        <div className="col-xs-6 no-padding">
-                            <a href="#" className="p-l-40">
-                                <img src="/static/admin/assets/img/demo/social_app.svg" alt="socail" />
-                            </a>
-                        </div>
-                        <div className="col-xs-6 no-padding">
-                            <a href="#" className="p-l-10">
-                                <img src="/static/admin/assets/img/demo/email_app.svg" alt="socail" />
-                            </a>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-xs-6 m-t-20 no-padding">
-                            <a href="#" className="p-l-40">
-                                <img src="/static/admin/assets/img/demo/calendar_app.svg" alt="socail" />
-                            </a>
-                        </div>
-                        <div className="col-xs-6 m-t-20 no-padding">
-                            <a href="#" className="p-l-10">
-                                <img src="/static/admin/assets/img/demo/add_more.svg" alt="socail" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                
 
                 <div className="sidebar-header">
                     <img src="/static/admin/assets/img/logo_white.png" alt="logo" className="brand" data-src="/static/admin/assets/img/logo_white.png" data-src-retina="/static/admin/assets/img/logo_white_2x.png"
@@ -61,26 +37,34 @@ const AdminLayout = (props) =>(
 
                     <ul className="menu-items">
                         <li className="m-t-30 ">
-                            <a href="social.html" className="w-100">
-                                <span className="title w-100"><i className="pg-home mr-3" />Dashboard</span>
-                            </a>
+                            <Link href="dashboard" passHref>
+                                <a href="" className="w-100">
+                                    <span className="title w-100"><i className="pg-home mr-3" />Dashboard</span>
+                                </a>
+                            </Link>
                         </li>
                         <TopicFont>Store Management</TopicFont>
                         <li className="">
-                            <a href="social.html" className="w-100">
-                                <span className="title w-100"><i className="pg-social mr-3" />Product Management</span>
-                            </a>
+                            <Link href="productmanagement" passHref>
+                                <a href="" className="w-100">
+                                    <span className="title w-100"><i className="pg-social mr-3" />Product Management</span>
+                                </a>
+                            </Link>
                         </li>
                         <li className="">
-                            <a href="social.html" className="w-100">
-                                <span className="title w-100"><i className="pg-social mr-3" />Order Management</span>
-                            </a>
+                            <Link href="ordermanagement" passHref>
+                                <a href="" className="w-100">
+                                    <span className="title w-100"><i className="pg-social mr-3" />Order Management</span>
+                                </a>
+                            </Link>
                         </li>
                         <TopicFont>Account Management</TopicFont>
                         <li className="">
-                            <a href="social.html" className="w-100">
-                                <span className="title w-100"><i className="pg-like1 mr-3" />User Management</span>
-                            </a>
+                            <Link href="usermanagement" passHref>
+                                <a href="" className="w-100">
+                                    <span className="title w-100"><i className="pg-like1 mr-3" />User Management</span>
+                                </a>
+                            </Link>
                         </li>
                         
                     </ul>

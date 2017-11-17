@@ -1,6 +1,6 @@
-import AdminLayout from '../components/adminlayout'
-import Portlet from '../components/portlet'
-import Card from '../components/card'
+import AdminLayout from '../../components/adminlayout'
+import Portlet from '../../components/portlet'
+import Card from '../../components/card'
 import styled , { injectGlobal } from 'styled-components'
 
 const ProductManagement = () => (

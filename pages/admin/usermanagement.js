@@ -1,6 +1,6 @@
-import AdminLayout from '../components/adminlayout'
-import Portlet from '../components/portlet'
-import Card from '../components/card'
+import AdminLayout from '../../components/adminlayout'
+import Portlet from '../../components/portlet'
+import Card from '../../components/card'
 import styled , { injectGlobal } from 'styled-components'
 
 
@@ -12,7 +12,7 @@ const ProductManagement = () => (
                     <Portlet>
                         <div className="d-flex">
                             <div className="mr-auto">
-                                <h3 className="">Order Management</h3>
+                                <h3 className="">User Management</h3>
                             </div>
                         </div> 
                         <hr  />
@@ -20,10 +20,10 @@ const ProductManagement = () => (
 								<thead>
 									<tr>
 										<th>#</th>
-										<th>Order Number</th>
-										<th>Customer</th>
-										<th>Price</th>
-										<th>Order Detail</th>
+										<th>Username</th>
+										<th>Customer Name</th>
+										<th>Email</th>
+										<th>Order</th>
 										<th>Action</th>
 									</tr>
 								</thead>
@@ -33,13 +33,13 @@ const ProductManagement = () => (
 											<p>1</p>
 										</td>
 										<td className="v-align-middle">
-                                            <p>OR123910</p>
+                                            <p>admin</p>
 										</td>
 										<td className="v-align-middle">
                                             <p>Monkey D Luffy</p>
 										</td>
 										<td className="v-align-middle">
-                                            <p>23,123</p>
+                                            <p>adminjaaaaaa@gmail.com</p>
 										</td>
 										<td className="v-align-middle">
                                             <button className="btn btn-primary m-b-10" type="button"><i className="pg-form"></i></button>

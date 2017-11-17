@@ -1,7 +1,8 @@
-import AdminLayout from '../components/adminlayout'
-import Portlet from '../components/portlet'
-import Card from '../components/card'
+import AdminLayout from '../../components/adminlayout'
+import Portlet from '../../components/portlet'
+import Card from '../../components/card'
 import styled , { injectGlobal } from 'styled-components'
+import Link from 'next/link'
 
 injectGlobal`
     .img-thumbnail-table{
@@ -19,7 +20,9 @@ const ProductManagement = () => (
                                 <h3 className="">Product Management</h3>
                             </div>
                             <div className="align-self-center">
-                                <button className="btn btn-info">เพิ่มสินค้า</button>
+                                <Link href="productedit">
+                                    <button className="btn btn-info">เพิ่มสินค้า</button>
+                                </Link>
                             </div>
                         </div> 
                         <hr  />

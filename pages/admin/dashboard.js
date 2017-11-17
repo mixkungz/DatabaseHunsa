@@ -1,6 +1,6 @@
-import AdminLayout from '../components/adminlayout'
+import AdminLayout from '../../components/adminlayout'
 import { injectGlobal } from 'styled-components'
-import Card from '../components/card'
+import Card from '../../components/card'
 
 injectGlobal`
     .shadow{
