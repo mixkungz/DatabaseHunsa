@@ -14,17 +14,20 @@ injectGlobal`
 
 export default () =>
 <div>
+    <div className="container">
+        © 2017 Cos'mate. All Rights Reserved
+    </div>
     <div className="container-fluid">
         <div className="row">
-            <div className="col col-border bg-cream">
+            <div className="col-6 col-border bg-cream">
                 <p className="text-center footer-icon mt-2"><i className="fa fa-dollar" /></p>
                 <p className="text-center">เก็บเงินปลายทาง</p>
             </div>
-            <div className="col col-border bg-cream">
+            <div className="col-2 col-border bg-cream">
                 <p className="text-center footer-icon mt-2"><i className="fa fa-truck" /></p>
                 <p className="text-center">บริการส่งสินค้าฟรี</p>
             </div>
-            <div className="col col-border bg-cream">
+            <div className="col-4 col-border bg-cream">
                 <p className="text-center footer-icon mt-2"><i className="fa fa-exchange" /></p>
                 <p className="text-center">คืนสินค้าฟรี</p>
             </div>

@@ -21,6 +21,46 @@ injectGlobal`
     .dropdown-menu.show{
         min-width:320px;
     }
+    .bg-secondary{
+        background-color: black !important;
+    }
+    #face,#eyes,#lips,#nails{
+        color: white;
+        padding: 4px;
+        font-size: 25px;
+        font-weight: bold;
+        transition:2s;
+    }
+    #face{
+        background-color:#490A3D;
+    }
+    #face:hover{
+        background-color:#26041f;
+        transition:0.5s;
+        
+    }
+    #eyes{
+        background-color:#BD1550;
+    }
+    #eyes:hover{
+        background-color:#96103f;
+        transition:0.5s;
+    }
+    #lips{
+        background-color:#E97F02;
+    }
+    #lips:hover{
+        background-color:#bc6600;
+        transition:0.5s;
+    }
+    #nails{
+        background-color:#F8CA00;
+    }
+    #nails:hover{
+        background-color:#c9a402;
+        transition:0.5s;
+    }
+
 `
 
 
@@ -41,25 +81,25 @@ export default class extends React.Component{
                                     <i className="fa fa-facebook-square social-icon mr-3" aria-hidden="true"></i>
                                     <i className="fa fa-twitter-square social-icon" aria-hidden="true"></i>
                                 </div>
-                                <div className="col-5 ml-auto mt-3">
+                                <div className="col-4 ml-auto mt-3">
                                     <ul className="list-inline text-white">
                                         <div className="dropdown dis-inline">
-                                            <li className="list-inline-item px-3 dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i className="fa fa-shopping-cart mr-2"/>ตะกร้า</li>
+                                            <li className="list-inline-item px-3 dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i className="fa fa-shopping-cart mr-2"/>Cart</li>
                                             <div className="dropdown-menu" aria-labelledby="dropdownMenu2">
                                             <table className="table table-hover">
                                             <tbody>
                                             <tr>
                                                 <td scope="row"><img className="img-fluid" src="/static/img/product/longsleeve.jpg" /></td>
                                                 <td className="w-50" scope="">Sweater Jumper Tops Knitwear</td>
-                                                <td className="text-right" scope="">฿199<br/><span className="text-danger">ลบ</span></td>
+                                                <td className="text-right" scope="">฿199<br/><span className="text-danger">Del</span></td>
                                             </tr>
                                             
                                             </tbody>
                                         </table>
                                             </div>
                                         </div>
-                                        <li className="list-inline-item px-3 awesome-border" data-toggle="modal" data-target="#register">ลงทะเบียน</li>
-                                        <li className="list-inline-item px-3" data-toggle="modal" data-target="#login">เข้าสู่ระบบ</li>
+                                        <li className="list-inline-item px-3 awesome-border" data-toggle="modal" data-target="#register">Sign up</li>
+                                        <li className="list-inline-item px-3" data-toggle="modal" data-target="#login">Sign in</li>
                                     </ul>
                                 </div>
                             </div>
@@ -76,6 +116,14 @@ export default class extends React.Component{
                             </div>
                         </div>
                     </nav>
+                    <div className="container-fluid">
+                        <div className="row text-center">
+                            <div className="col" id="face">FACE</div>
+                            <div className="col" id="eyes">EYES</div>
+                            <div className="col" id="lips">LIPS</div>
+                            <div className="col" id="nails">NAILS</div>
+                        </div>
+                    </div>
                     <div className="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div className="modal-dialog" role="document">
                             <div className="modal-content">

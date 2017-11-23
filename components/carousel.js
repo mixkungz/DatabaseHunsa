@@ -17,13 +17,13 @@ export default () =>
     </ol>
     <div className="carousel-inner">
         <div className="carousel-item active">
-        <img className="d-block w-100" src="/static/img/slide1.svg" alt="First slide" />
+        <img className="d-block w-100" src="/static/img/slide1.png" alt="First slide" />
         </div>
         <div className="carousel-item">
-        <img className="d-block w-100" src="/static/img/slide2.svg" alt="Second slide" />
+        <img className="d-block w-100" src="/static/img/slide2.png" alt="Second slide" />
         </div>
         <div className="carousel-item">
-        <img className="d-block w-100" src="/static/img/slide3.svg" alt="Third slide" />
+        <img className="d-block w-100" src="/static/img/slide3.png" alt="Third slide" />
         </div>
     </div>
     <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
