@@ -10,11 +10,14 @@ injectGlobal`
     margin-right:5px;
 }
 .card-img-top{
-    width:85%;
+    width:65%;
 }
 `
 class Main extends React.Component {
-    
+    constructor(props) {
+        super(props);
+        this.state = {        };
+    }
 
     render() {
         const settings = {
@@ -35,7 +38,7 @@ class Main extends React.Component {
                     <div className="container mt-3">
                         <div className="row">
                             <div className="col">
-                                <p>เครื่องแต่งกาย</p>
+                                {/* <p>เครื่องแต่งกาย</p>
                                 <Slider {...settings}>
                                     <div>
                                         <div className="card">
@@ -138,10 +141,64 @@ class Main extends React.Component {
                                         </div>
                                     </div>
                                 </Slider>
-                                <br />
+                                <br /> */}
                                    
                                 <p>สินค้าทั้งหมด</p>
-
+                                <div className="row mb-3">
+                                    <div className="col-3">
+                                        <div className="card">
+                                            <div className="text-center">
+                                                <img className="card-img-top mx-auto d-block" src="/static/img/product/foca2.jpg" />
+                                            </div>
+                                            <div className="card-body">
+                                                <h5 className="card-title">FOCALLURE Brand Liquid Lipstick Matte Waterproof</h5>
+                                                <p className="text-danger">199 บาท</p>
+                                                <p className="text-center"><a href="#" className="btn btn-success btn-block">Add to cart</a></p>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-3">
+                                        <div className="card">
+                                            <div className="text-center">
+                                                <img className="card-img-top mx-auto d-block" src="/static/img/product/foca2.jpg" />
+                                            </div>
+                                            <div className="card-body">
+                                                <h5 className="card-title">FOCALLURE Brand Liquid Lipstick Matte Waterproof</h5>
+                                                <p className="text-danger">199 บาท</p>
+                                                <p className="text-center"><a href="#" className="btn btn-success btn-block">Add to cart</a></p>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-3">
+                                        <div className="card">
+                                            <div className="text-center">
+                                                <img className="card-img-top mx-auto d-block" src="/static/img/product/foca2.jpg" />
+                                            </div>
+                                            <div className="card-body">
+                                                <h5 className="card-title">FOCALLURE Brand Liquid Lipstick Matte Waterproof</h5>
+                                                <p className="text-danger">199 บาท</p>
+                                                <p className="text-center"><a href="#" className="btn btn-success btn-block">Add to cart</a></p>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-3">
+                                        <div className="card">
+                                            <div className="text-center">
+                                                <img className="card-img-top mx-auto d-block" src="/static/img/product/foca2.jpg" />
+                                            </div>
+                                            <div className="card-body">
+                                                <h5 className="card-title">FOCALLURE Brand Liquid Lipstick Matte Waterproof</h5>
+                                                <p className="text-danger">199 บาท</p>
+                                                <p className="text-center"><a href="#" className="btn btn-success btn-block">Add to cart</a></p>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
                             </div>
                         </div>
                     </div>
