@@ -159,7 +159,6 @@ export default class extends React.Component{
                             </div>
                         </div>
                     </nav>
-<<<<<<< HEAD
                     <div className="container-fluid">
                         <div className="row text-center">
                             <div className="col" id="face">FACE</div>
@@ -168,10 +167,7 @@ export default class extends React.Component{
                             <div className="col" id="nails">NAILS</div>
                         </div>
                     </div>
-                    <div className="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-=======
                     <div className="modal fade" id="register" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
->>>>>>> ceed6fd2392d0b0e21ffbccd981a44de0f928f9f
                         <div className="modal-dialog" role="document">
                             <div className="modal-content">
                                 <div className="modal-body">
