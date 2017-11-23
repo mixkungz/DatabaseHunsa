@@ -1,6 +1,6 @@
 import styled , {injectGlobal} from 'styled-components'
 import SweetAlert from 'sweetalert2-react'
-
+import Axios from 'axios'
 
 injectGlobal`
     .awesome-border{
@@ -18,7 +18,7 @@ injectGlobal`
     .dis-inline{
         display:inline;
     }
-    .dropdown-menu.show{
+    .dropdown-menu.show{    
         min-width:320px;
     }
     .bg-secondary{
@@ -66,9 +66,52 @@ injectGlobal`
 
 
 export default class extends React.Component{
-    constructor(props) {
-        super(props);
-        this.state = { show: false };
+    state = {
+        show: false,
+        registerdata:{
+            username:'',
+            password:'',
+            confirmpassword:'',
+            email:'',
+            firstname:'',
+            lastname:''
+        }
+    }
+
+    register = async () => {
+        let { username, password,confirmpassword, email, firstname, lastname } = await this.state.registerdata
+        if(password !== confirmpassword){
+            const password = document.getElementById('password')
+            const confirmpassword = document.getElementById('confirmpassword')
+            password.classList.add('is-invalid');
+            confirmpassword.classList.add('is-invalid');
+        }
+        else{
+            await Axios({
+                method: 'post',
+                url: 'http://localhost:3001/user/newuser',
+                data: {
+                  username: username,
+                  password: password,
+                  email: email,
+                  firstname: firstname,
+                  lastname: lastname
+                }
+            }).then(function (response) {
+                console.log(response);
+                if(response.data == 'success'){
+                    
+                }
+              })
+              .catch(function (error) {
+                console.log(error);
+                if(response.data == 'ER_DUP_ENTRY'){
+    
+                }
+              });
+            console.log('shoot')
+        }
+        
     }
 
     render(){
@@ -116,6 +159,7 @@ export default class extends React.Component{
                             </div>
                         </div>
                     </nav>
+<<<<<<< HEAD
                     <div className="container-fluid">
                         <div className="row text-center">
                             <div className="col" id="face">FACE</div>
@@ -125,60 +169,43 @@ export default class extends React.Component{
                         </div>
                     </div>
                     <div className="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+=======
+                    <div className="modal fade" id="register" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+>>>>>>> ceed6fd2392d0b0e21ffbccd981a44de0f928f9f
                         <div className="modal-dialog" role="document">
                             <div className="modal-content">
                                 <div className="modal-body">
                                     <h3>แบบฟอร์มสมัครสมาชิก</h3>
-                                    <form>
-                                    <div className="form-row">
-                                    <div className="form-group col-md-6">
-                                        <label for="inputEmail4">Email</label>
-                                        <input type="email" className="form-control" id="inputEmail4" placeholder="Email" />
-                                    </div>
-                                    <div className="form-group col-md-6">
-                                        <label for="inputPassword4">Password</label>
-                                        <input type="password" className="form-control" id="inputPassword4" placeholder="Password" />
-                                    </div>
-                                    </div>
-                                    <div className="form-group">
-                                    <label for="inputAddress">Address</label>
-                                    <input type="text" className="form-control" id="inputAddress" placeholder="1234 Main St" />
-                                    </div>
-                                    <div className="form-group">
-                                    <label for="inputAddress2">Address 2</label>
-                                    <input type="text" className="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" />
-                                    </div>
-                                    <div className="form-row">
-                                    <div className="form-group col-md-6">
-                                        <label for="inputCity">City</label>
-                                        <input type="text" className="form-control" id="inputCity" />
-                                    </div>
-                                    <div className="form-group col-md-4">
-                                        <label for="inputState">State</label>
-                                        <select id="inputState" className="form-control">
-                                        <option selected>Choose...</option>
-                                        <option>...</option>
-                                        </select>
-                                    </div>
-                                    <div className="form-group col-md-2">
-                                        <label for="inputZip">Zip</label>
-                                        <input type="text" className="form-control" id="inputZip" />
-                                    </div>
-                                    </div>
-                                    <div className="form-group">
-                                    <div className="form-check">
-                                        <label className="form-check-label">
-                                        <input className="form-check-input" type="checkbox" /> Check me out
-                                        </label>
-                                    </div>
-                                    </div>
-                                    <button type="submit" className="btn btn-primary">Register</button>
-                                </form>
+                                    <hr />
+                                    {/* <form onSubmit={this.register}> */}
+                                        <div className="form-group">
+                                            <input type="text" className="form-control" value={this.state.registerdata.username} onChange={(e) => this.setState({registerdata:{...this.state.registerdata,username:e.target.value}})} id="username" placeholder="Username" required />
+                                        </div>
+                                        <div className="form-group">
+                                            <input type="password" className="form-control" value={this.state.registerdata.password} id="password" placeholder="Password" onChange={(e)=> this.setState({registerdata:{...this.state.registerdata,password:e.target.value}})} required />
+                                        </div>
+                                        <div className="form-group">
+                                            <input type="password" className="form-control" value={this.state.registerdata.confirmpassword} id="confirmpassword" placeholder="Confirm Password" onChange={(e)=> this.setState({registerdata:{...this.state.registerdata,confirmpassword:e.target.value}})} required />
+                                        </div>
+                                        <div className="form-group">
+                                            <input type="email" className="form-control" value={this.state.registerdata.email} id="email" placeholder="Email" onChange={(e)=> this.setState({registerdata:{...this.state.registerdata,email:e.target.value}})} required />
+                                        </div>
+                                        <div className="form-group">
+                                            <input type="text" className="form-control" value={this.state.registerdata.firstname} id="firstname" placeholder="Firstname" onChange={ (e) => this.setState({registerdata:{...this.state.registerdata,firstname:e.target.value}})} required />
+                                        </div>
+                                        <div className="form-group">
+                                            <input type="text" className="form-control" value={this.state.registerdata.lastname} id="lastname" placeholder="Lastname" onChange={(e)=> this.setState({registerdata:{...this.state.registerdata,lastname:e.target.value}})} required />
+                                        </div>
+                                        <div className="d-flex justify-content-end">
+                                            <button type="reset" className="btn btn-danger mx-2">Reset</button>
+                                            <button type="submit" onClick={this.register} className="btn btn-success">Submit</button>
+                                        </div>
+                                    {/* </form> */}
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div className="modal fade" id="login" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div className="modal-dialog" role="document">
                             <div className="modal-content">
                                 <div className="modal-body">
@@ -186,7 +213,7 @@ export default class extends React.Component{
                                     <div className="form-group">
                                         <input type="text" className="form-control mb-3" id="username" placeholder="Username" />
                                         <input type="password" className="form-control mb-3" id="password" placeholder="Password" />
-                                        <button type="button" class="btn btn-primary btn-block">Sign in</button>
+                                        <button type="button" className="btn btn-primary btn-block">Sign in</button>
                                     </div>
                                 </div>
                             </div>

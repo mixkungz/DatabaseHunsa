@@ -5,9 +5,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "axios": "^0.17.1",
     "babel-plugin-import": "^1.6.2",
-    "draft-js": "^0.10.4",
-    "es6-shim": "^0.35.3",
     "next": "^4.1.4",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
