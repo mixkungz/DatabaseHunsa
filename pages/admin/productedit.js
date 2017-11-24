@@ -19,7 +19,8 @@ class ProductManagement extends React.Component {
             productdesc : '',
             quantity : 0,
             price : 0,
-            category:0
+            category:0,
+            img:null
         },
         catlist :[]
 
@@ -27,7 +28,7 @@ class ProductManagement extends React.Component {
     }
     
     componentWillMount = async() =>{
-        let catlist = await Axios({
+        let catlist =await Axios({
             method:'get',
             url:'http://localhost:3001/product/productcat',
           })
@@ -38,22 +39,8 @@ class ProductManagement extends React.Component {
         
     }
 
-    handleUploadFile = (event) => {
-        const data = new FormData();
-        data.append('file', event.target.files[0]);
-        data.append('name', 'some value user types');
-        data.append('description', 'some value user types');
-        
-    }
-
     upload = async() =>{
-        let { productname, productdesc , quantity , price, category } = await this.state.uploadData
-        const inputFile = document.getElementById('picture')
-        const userFile = new FormData()
-        userFile.append('file', event.target.files[0]);
-        console.log('5555')
-        console.log(userFile)
-        console.log('6666')
+        let { productname, productdesc , quantity , price, category , img } = await this.state.uploadData
         
         if(false){
             
@@ -68,7 +55,7 @@ class ProductManagement extends React.Component {
                     quantity: quantity,
                     price: price,
                     category: category,
-                    file:userFile
+                    img:img
                 }
             }).then(function (response) {
                 if(response.data == 'success'){
@@ -90,6 +77,7 @@ class ProductManagement extends React.Component {
         console.log(this.state.uploadData.quantity)
         console.log(this.state.uploadData.price)
         console.log(this.state.uploadData.category)
+        console.log(this.state.uploadData.img)
     }
     render(){
         return(
@@ -136,13 +124,13 @@ class ProductManagement extends React.Component {
                                 <div className="form-group row">
                                     <label for="staticEmail" className="col-sm-2 col-form-label text-right mr-3">รูปสินค้าหลัก</label>
                                     <div className="col-sm-9">
-                                        <input type="file" className="form-control-file" id="picture"  />
+                                        <input type="text" className="form-control" id="imglink" onChange={(e)=>this.setState({uploadData:{...this.state.uploadData,img:e.target.value}})} />
                                     </div>
                                 </div>
                             <hr />
                             <div className="row">
                                 <div className="col-11">
-                                    <button className="btn btn-success pull-right" onClick={this.upload}>Save</button>
+                                    <button className="btn btn-success pull-right" onClick={this.check}>Save</button>
                                     <Link href="productmanagement">
                                         <button className="btn btn-danger pull-right mr-2">Cancel</button>
                                     </Link>
