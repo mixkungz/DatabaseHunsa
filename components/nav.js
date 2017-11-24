@@ -69,22 +69,54 @@ export default class extends React.Component{
     state = {
         show: false,
         registerdata:{
-            username:'',
-            password:'',
-            confirmpassword:'',
-            email:'',
-            firstname:'',
-            lastname:''
+            username:null,
+            password:null,
+            confirmpassword:null,
+            email:null,
+            firstname:null,
+            lastname:null
         }
     }
 
     register = async () => {
-        let { username, password,confirmpassword, email, firstname, lastname } = await this.state.registerdata
+        let { username, password, confirmpassword, email, firstname, lastname } = await this.state.registerdata
+        
+        if(username == null){
+            const usernameform = document.getElementById('username')
+            usernameform.classList.add('is-invalid');
+            alert('Please input username')
+        }
+        if(password == null){
+            const passwordform = document.getElementById('password')
+            passwordform.classList.add('is-invalid');
+            alert('Please input password')
+        }
+        if(confirmpassword == null){
+            const confirmpasswordform = document.getElementById('confirmpassword')
+            confirmpasswordform.classList.add('is-invalid');
+            alert('Please input confirmpassword')
+        }
+        if(email == null){
+            const emailform = document.getElementById('email')
+            emailform.classList.add('is-invalid');
+            alert('Please input email')
+        }
+        if(firstname == null){
+            const firstnameform = document.getElementById('firstname')
+            firstnameform.classList.add('is-invalid');
+            alert('Please input firstname')
+        }
+        if(lastname == null){
+            const lastnameform = document.getElementById('lastname')
+            lastnameform.classList.add('is-invalid');
+            alert('Please input lastname')
+        }
         if(password !== confirmpassword){
-            const password = document.getElementById('password')
-            const confirmpassword = document.getElementById('confirmpassword')
-            password.classList.add('is-invalid');
-            confirmpassword.classList.add('is-invalid');
+            const passwordform = document.getElementById('password')
+            const confirmpasswordform = document.getElementById('confirmpassword')
+            passwordform.classList.add('is-invalid');
+            confirmpasswordform.classList.add('is-invalid');
+            alert('Please check password')
         }
         else{
             await Axios({
@@ -100,13 +132,14 @@ export default class extends React.Component{
             }).then(function (response) {
                 console.log(response);
                 if(response.data == 'success'){
-                    
+                    alert('Register success!!')
                 }
               })
               .catch(function (error) {
                 console.log(error);
                 if(response.data == 'ER_DUP_ENTRY'){
-    
+                    const usernameform = document.getElementById('username')
+                    username.classList.add('is-invalid');
                 }
               });
             console.log('shoot')
@@ -159,7 +192,6 @@ export default class extends React.Component{
                             </div>
                         </div>
                     </nav>
-<<<<<<< HEAD
                     <div className="container-fluid">
                         <div className="row text-center">
                             <div className="col" id="face">FACE</div>
@@ -169,13 +201,10 @@ export default class extends React.Component{
                         </div>
                     </div>
                     <div className="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-=======
-                    <div className="modal fade" id="register" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
->>>>>>> ceed6fd2392d0b0e21ffbccd981a44de0f928f9f
                         <div className="modal-dialog" role="document">
                             <div className="modal-content">
                                 <div className="modal-body">
-                                    <h3>แบบฟอร์มสมัครสมาชิก</h3>
+                                    <h3>Sign up</h3>
                                     <hr />
                                     {/* <form onSubmit={this.register}> */}
                                         <div className="form-group">
@@ -209,7 +238,7 @@ export default class extends React.Component{
                         <div className="modal-dialog" role="document">
                             <div className="modal-content">
                                 <div className="modal-body">
-                                    <h3 className="mb-3">เข้าสู่ระบบ</h3>
+                                    <h3 className="mb-3">Sign in</h3>
                                     <div className="form-group">
                                         <input type="text" className="form-control mb-3" id="username" placeholder="Username" />
                                         <input type="password" className="form-control mb-3" id="password" placeholder="Password" />
