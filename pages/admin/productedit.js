@@ -15,10 +15,10 @@ injectGlobal`
 class ProductManagement extends React.Component {
     state={
         uploadData : {
-            productname : '',
-            productdesc : '',
-            quantity : 0,
-            price : 0,
+            productname : null,
+            productdesc : null,
+            quantity : null,
+            price : null,
             category:0
         },
         catlist :[]
@@ -48,15 +48,37 @@ class ProductManagement extends React.Component {
 
     upload = async() =>{
         let { productname, productdesc , quantity , price, category } = await this.state.uploadData
-        const inputFile = document.getElementById('picture')
-        const userFile = new FormData()
-        userFile.append('file', event.target.files[0]);
-        console.log('5555')
-        console.log(userFile)
-        console.log('6666')
+        // const inputFile = document.getElementById('picture')
+        // const userFile = new FormData()
+        // userFile.append('file', event.target.files[0]);
+        // console.log('5555')
+        // console.log(userFile)
+        // console.log('6666')
         
-        if(false){
-            
+        if(productname == null){
+            const productnameform = document.getElementById('productname')
+            productnameform.classList.add('is-invalid');
+            alert('Please input productname')
+        }
+        if(productdesc == null){
+            const productdescform = document.getElementById('productdesc')
+            productdescform.classList.add('is-invalid');
+            alert('Please input productdesc')
+        }
+        if(quantity == null){
+            const quantityform = document.getElementById('quantity')
+            quantityform.classList.add('is-invalid');
+            alert('Please input quantity')
+        }
+        if(quantity < 0){
+            const quantityform = document.getElementById('quantity')
+            quantityform.classList.add('is-invalid');
+            alert('Please check quantity')
+        }
+        if(price == null){
+            const priceform = document.getElementById('price')
+            priceform.classList.add('is-invalid');
+            alert('Please input price')
         }
         else{
             await Axios({
@@ -67,8 +89,8 @@ class ProductManagement extends React.Component {
                     productdesc: productdesc,
                     quantity: quantity,
                     price: price,
-                    category: category,
-                    file:userFile
+                    category: category
+                    
                 }
             }).then(function (response) {
                 if(response.data == 'success'){
