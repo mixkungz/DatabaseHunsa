@@ -80,6 +80,8 @@ export default class extends React.Component{
 
     register = async () => {
         let { username, password,confirmpassword, email, firstname, lastname } = await this.state.registerdata
+        const arr=[username,password,email,firstname,lastname]
+        
         if(password !== confirmpassword){
             const password = document.getElementById('password')
             const confirmpassword = document.getElementById('confirmpassword')
@@ -98,16 +100,15 @@ export default class extends React.Component{
                   lastname: lastname
                 }
             }).then(function (response) {
-                console.log(response);
                 if(response.data == 'success'){
-                    
+                    console.log('yahhhhhhh')
+                }
+                if(response.data == 'ER_DUP_ENTRY'){
+                    console.log('eiei wowowwowowowowow')
                 }
               })
               .catch(function (error) {
-                console.log(error);
-                if(response.data == 'ER_DUP_ENTRY'){
-    
-                }
+                
               });
             console.log('shoot')
         }
