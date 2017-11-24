@@ -23,22 +23,31 @@ class ProductManagement extends React.Component {
             img:null
         },
         catlist :[],
-        query:null
+        query:-1,
+        
     }
     
     componentWillMount = async() =>{
-        if(!Router.query.length){
+        if(!Router.query.productID){
             console.log('no query')
         }
         else{
-            this.setState({query:Router.query.productID})
-            let catlist =await Axios({
+            await this.setState({query:Router.query.productID})
+            let ProductData =await Axios({
                 method:'get',
                 url:`http://localhost:3001/product/${this.state.query}`,
               })
                 .then(function(res) {
                     return res
               });
+            await this.setState({uploadData:{
+                productname : ProductData.data[0].ProductName,
+                productdesc : ProductData.data[0].ProductDesc,
+                quantity : ProductData.data[0].Quantity,
+                price : ProductData.data[0].ProductPrice,
+                category : ProductData.data[0].CategoryID,
+                img : ProductData.data[0].ProductImg
+            }})
         }
         let catlist =await Axios({
             method:'get',
@@ -105,21 +114,66 @@ class ProductManagement extends React.Component {
             console.log('shoot')
         }
     }
-    check = () =>{
-        console.log(this.state.uploadData.productname)
-        console.log(this.state.uploadData.productdesc)
-        console.log(this.state.uploadData.quantity)
-        console.log(this.state.uploadData.price)
-        console.log(this.state.uploadData.category)
-        console.log(this.state.uploadData.img)
+    update = async() =>{
+        let { productname, productdesc , quantity , price, category , img } = await this.state.uploadData
+        
+        if(productname == null){
+            const productnameform = document.getElementById('productname')
+            productnameform.classList.add('is-invalid');
+            alert('Please input productname')
+        }
+        if(productdesc == null){
+            const productdescform = document.getElementById('productdesc')
+            productdescform.classList.add('is-invalid');
+            alert('Please input productdesc')
+        }
+        if(quantity == null){
+            const quantityform = document.getElementById('quantity')
+            quantityform.classList.add('is-invalid');
+            alert('Please input quantity')
+        }
+        if(quantity < 0){
+            const quantityform = document.getElementById('quantity')
+            quantityform.classList.add('is-invalid');
+            alert('Please check quantity')
+        }
+        if(price == null){
+            const priceform = document.getElementById('price')
+            priceform.classList.add('is-invalid');
+            alert('Please input price')
+        }
+        else{
+            await Axios({
+                method: 'post',
+                url: `http://localhost:3001/admin/product/update/${this.state.query}`,
+                data: {
+                    productname: productname,
+                    productdesc: productdesc,
+                    quantity: quantity,
+                    price: price,
+                    category: category,
+                    img:img
+                }
+            }).then(function (response) {
+                console.log(response.data)
+                if(response.data.status == true){
+                    alert('แอดเรียบร้อย')
+                }
+                else if(response.data.status == false){
+                    alert(response.data.msg)
+                }
+              })
+              .catch(function (error) {
+                
+              });
+            console.log('shoot')
+        }
     }
+    
     render(){
-        return(
-        <div>
-            <AdminLayout>
-                <div className="row">
-                    <div className="col-12">
-                        <Portlet>
+        let S = () =>(
+            <div>
+                <Portlet>
                                 <div className="form-group row">
                                     <label for="staticEmail" className="col-sm-2 col-form-label text-right mr-3">ชื่อสินค้า</label>
                                     <div className="col-sm-9">
@@ -172,6 +226,77 @@ class ProductManagement extends React.Component {
                             </div>
                             
                         </Portlet>
+            </div>
+        )
+        if(this.state.query !== -1){
+            S = () =>(
+                <div>
+                    <Portlet>
+                                <div className="form-group row">
+                                    <label for="staticEmail" className="col-sm-2 col-form-label text-right mr-3">ชื่อสินค้า</label>
+                                    <div className="col-sm-9">
+                                        <input type="text" className="form-control" value={this.state.uploadData.productname} id="productname" onChange={(e)=>this.setState({uploadData:{...this.state.uploadData,productname:e.target.value}})} />
+                                    </div>
+                                </div>
+                                <div className="form-group row">
+                                    <label for="inputPassword" className="col-sm-2 col-form-label text-right mr-3">หมวดหมู่</label>
+                                    <div className="col-sm-9">
+                                        <select className="form-control" id="category" data-init-plugin="select2"  onChange={(e)=>this.setState({uploadData:{...this.state.uploadData,category:e.target.value}})}>
+                                            {
+                                                this.state.catlist.map((data,index)=> 
+                                                <option value={index}>{data}</option> )
+                                            }
+                                        </select>
+                                    </div>
+                                </div>
+                                <div className="form-group row">
+                                    <label for="staticEmail" className="col-sm-2 col-form-label text-right mr-3">รายละเอียดสินค้า</label>
+                                    <div className="col-sm-9">
+                                        <textarea className="form-control" value={this.state.uploadData.productdesc} id="productdesc" rows="5" onChange={(e)=>this.setState({uploadData:{...this.state.uploadData,productdesc:e.target.value}})}></textarea>
+                                    </div>
+                                </div>
+                                <div className="form-group row">
+                                    <label for="staticEmail" className="col-sm-2 col-form-label text-right mr-3">ราคาสินค้า (บาท)</label>
+                                    <div className="col-sm-9">
+                                        <input type="number" className="form-control" value={this.state.uploadData.price} id="price" onChange={(e)=>this.setState({uploadData:{...this.state.uploadData,price:e.target.value}})} />
+                                    </div>
+                                </div>
+                                <div className="form-group row">
+                                    <label for="staticEmail" className="col-sm-2 col-form-label text-right mr-3">จำนวนสินค้า</label>
+                                    <div className="col-sm-9">
+                                        <input type="number" className="form-control" id="quantity" value={this.state.uploadData.quantity} onChange={(e)=>this.setState({uploadData:{...this.state.uploadData,quantity:e.target.value}})} />
+                                    </div>
+                                </div>
+                                <div className="form-group row">
+                                    <label for="staticEmail" className="col-sm-2 col-form-label text-right mr-3">รูปสินค้าหลัก</label>
+                                    <div className="col-sm-9">
+                                        <input type="text" className="form-control" id="imglink" value={this.state.uploadData.img} onChange={(e)=>this.setState({uploadData:{...this.state.uploadData,img:e.target.value}})} />
+                                    </div>
+                                </div>
+                                
+                            <hr />
+                            <div className="row">
+                                <div className="col-11">
+                                    <button className="btn btn-success pull-right" onClick={this.update}>Save</button>
+                                    <Link href="productmanagement">
+                                        <button className="btn btn-danger pull-right mr-2">Cancel</button>
+                                    </Link>
+                                </div>
+                            </div>
+                            
+                        </Portlet>
+                </div>
+            )
+        }
+    
+        return(
+        <div>
+            <AdminLayout>
+                <div className="row">
+                    <div className="col-12">
+                    {
+                        <S />
+                    }                        
                     </div>
                 </div>
             </AdminLayout>
