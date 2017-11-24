@@ -130,17 +130,16 @@ export default class extends React.Component{
                   lastname: lastname
                 }
             }).then(function (response) {
-                console.log(response);
                 if(response.data == 'success'){
                     alert('Register success!!')
                 }
-              })
-              .catch(function (error) {
-                console.log(error);
                 if(response.data == 'ER_DUP_ENTRY'){
                     const usernameform = document.getElementById('username')
                     username.classList.add('is-invalid');
                 }
+              })
+              .catch(function (error) {
+                
               });
             console.log('shoot')
         }
@@ -200,7 +199,11 @@ export default class extends React.Component{
                             <div className="col" id="nails">NAILS</div>
                         </div>
                     </div>
+<<<<<<< HEAD
                     <div className="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+=======
+                    <div className="modal fade" id="register" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+>>>>>>> f55e10b44a622f00876eca4725c9a3db70c18feb
                         <div className="modal-dialog" role="document">
                             <div className="modal-content">
                                 <div className="modal-body">
