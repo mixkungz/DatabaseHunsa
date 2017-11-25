@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import MyLayout from '../components/layout'
+import withLayout from '../components/layout'
 import styled , { injectGlobal } from 'styled-components'
 import Slider from 'react-slick'
 import Carousel from '../components/carousel'
@@ -34,25 +34,21 @@ class Main extends React.Component {
             userDetail:JSON.parse(window.localStorage.getItem("userdetail"))
         })
     }
-    addToCart = (pid) =>{
+    addToCart = (e, data) =>{
         if(this.state.userDetail == null){
             alert('กรุณาล็อคอิน')
         }
         else{
-
+            const items = [...this.props.item, { item: data }]
+            this.props.parentThis.setState({
+                items
+            })
         }
     }
+
     render() {
-        const settings = {
-            dots: true,
-            infinite: true,
-            speed: 500,
-            slidesToShow: 4,
-            adaptiveHeight:true
-          };
       return (
         <div>
-            <MyLayout>
                 <Head>
                     <title>DatabaseHunsa | หน้าหลัก</title>
                 </Head>
@@ -77,8 +73,7 @@ class Main extends React.Component {
                                                                 <div className="card-body">
                                                                     <h5 className="card-title">{data.ProductName}</h5>
                                                                     <p className="text-danger">{data.ProductPrice} บาท</p>
-                                                                    <p className="text-center"><a href="#" className="btn btn-info btn-block" onClick={()=>this.addToCart(data.ProductID)}>Add to cart</a></p>
-                                                                    
+                                                                    <p className="text-center"><button className="btn btn-info btn-block" onClick={(e) => this.addToCart(e, data)}>Add to cart</button></p>
                                                                 </div>
                                                             </div>
                                                         </div> 
@@ -101,10 +96,9 @@ class Main extends React.Component {
                         </div> {/* row */}
                     </div> {/* container */}
                 </div>
-            </MyLayout>
         </div>
       );
     }
 }
 
-export default Main
+export default withLayout(Main)

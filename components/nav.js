@@ -201,7 +201,7 @@ export default class extends React.Component{
         })
     }
     render(){
-        console.log(this.state)
+        console.log(this.props)
         return(
                 <div>
                     <nav className="bg-secondary">
@@ -218,12 +218,24 @@ export default class extends React.Component{
                                             <div className="dropdown-menu" aria-labelledby="dropdownMenu2">
                                             <table className="table table-hover">
                                             <tbody>
-                                            <tr>
-                                                <td scope="row"><img className="img-fluid" src="/static/img/product/longsleeve.jpg" /></td>
-                                                <td className="w-50" scope="">Sweater Jumper Tops Knitwear</td>
-                                                <td className="text-right" scope="">฿199<br/><span className="text-danger">Del</span></td>
-                                            </tr>
-                                            
+                                                {
+                                                    this.props.items.map(item => 
+                                                        (<tr key={item.item.ProductID}>
+                                                            <td scope="row"><img className="img-fluid" src={item.item.ProductImg} /></td>
+                                                            <td className="w-50" scope="">{item.item.ProductName}</td>
+                                                            <td className="text-right" scope="">{item.item.ProductPrice} บาท<br/>
+                                                            <button className="text-danger" onClick={() => {
+                                                                const items = this.props.items.filter(i => i.item.ProductID !== item.item.ProductID)
+                                                                this.props.parentThis.setState({
+                                                                    items
+                                                                })
+                                                            }}>Del</button></td>
+                                                        </tr>)
+                                                    )
+                                                }
+                                                <tr className="justify-content-center"><button className="btn btn-success" onClick={() => {
+                                                    this.props.parentThis.buy()
+                                                }}>ยืนยันการซื้อ</button></tr>
                                             </tbody>
                                         </table>
                                             </div>

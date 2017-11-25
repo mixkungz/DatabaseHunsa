@@ -97,6 +97,7 @@ class ProductManagement extends React.Component{
 						</div>
 					</AdminLayout>:<div> คุณไม่ใช่แอดมิน </div>
                     : <div>โปรดล็อคอินมาก่อน</div>
+				}
 			</div>
 		)
 	}

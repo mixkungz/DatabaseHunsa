@@ -1,7 +1,7 @@
 import styled , {injectGlobal} from 'styled-components'
 import Axios from 'axios'
 import Head from '../../components/adminhead'
-
+import Router from 'next/router'
 const Box = styled.div`
 height:100vh;
 weight:100vw;
@@ -33,8 +33,10 @@ class Login extends React.Component{
                     alert('login')
                     
                 }
-                // window.localStorage.setItem('userdetail',JSON.stringify(response.data[0]));
-                // await location.reload()
+                window.localStorage.setItem('userdetail',JSON.stringify(response.data[0]));
+                Router.push({
+                    pathname: '/admin/dashboard',
+                })
             }
           })
           .catch(function (error) {
