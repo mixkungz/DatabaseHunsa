@@ -1,6 +1,7 @@
 import AdminLayout from '../../components/adminlayout'
 import { injectGlobal } from 'styled-components'
 import Card from '../../components/card'
+import Axios from 'axios'
 
 injectGlobal`
     .shadow{
@@ -9,7 +10,21 @@ injectGlobal`
 `
 
 class Dashboard extends React.Component{
+    state={
+        useramout:0
+    }
+    componentWillMount = async()=>{
+        let data = await Axios({
+            method:'get',
+            url:'http://localhost:3001/user/useramout',
+          })
+            .then(function(res) {
+                return res
+          });
+        this.setState({useramout:data.data[0].useramout})
+        console.log(this.state.useramout)
 
+    }
     
     render(){
         return(
@@ -17,10 +32,10 @@ class Dashboard extends React.Component{
                 <AdminLayout>
                     <div className="row">
                         <div className="col-lg-2 m-b-10">
-                            <Card topic="All Users" value="5" myclass="fa fa-user mx-2 mr-3" />
+                            <Card topic="All Users" value={this.state.useramout} myclass="fa fa-user mx-2 mr-3" />
                         </div>
                         <div className="col-lg-3 m-b-10">
-                            <Card topic="Income" value="50,000" myclass="fa fa-money mx-2 mr-3" />
+                            <Card topic="Income" value="0" myclass="fa fa-money mx-2 mr-3" />
                         </div>
                     </div>
                 </AdminLayout>  
