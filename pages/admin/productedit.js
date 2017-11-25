@@ -99,10 +99,13 @@ class ProductManagement extends React.Component {
                     category: category,
                     img:img
                 }
-            }).then(function (response) {
+            }).then(async function (response) {
                 console.log(response.data)
                 if(response.data.status == true){
                     alert('แอดเรียบร้อย')
+                    await Router.push({
+                        pathname: '/admin/productmanagement'
+                    })
                 }
                 else if(response.data.status == false){
                     alert(response.data.msg)
@@ -154,10 +157,13 @@ class ProductManagement extends React.Component {
                     category: category,
                     img:img
                 }
-            }).then(function (response) {
+            }).then(async function (response) {
                 console.log(response.data)
                 if(response.data.status == true){
-                    alert('แอดเรียบร้อย')
+                    alert('อัพเดทเรียบร้อย')
+                    await Router.push({
+                        pathname: '/admin/productmanagement',
+                    })
                 }
                 else if(response.data.status == false){
                     alert(response.data.msg)
@@ -171,132 +177,93 @@ class ProductManagement extends React.Component {
     }
     
     render(){
-        let S = () =>(
-            <div>
-                <Portlet>
-                                <div className="form-group row">
-                                    <label for="staticEmail" className="col-sm-2 col-form-label text-right mr-3">ชื่อสินค้า</label>
-                                    <div className="col-sm-9">
-                                        <input type="text" className="form-control" id="productname" onChange={(e)=>this.setState({uploadData:{...this.state.uploadData,productname:e.target.value}})} />
-                                    </div>
-                                </div>
-                                <div className="form-group row">
-                                    <label for="inputPassword" className="col-sm-2 col-form-label text-right mr-3">หมวดหมู่</label>
-                                    <div className="col-sm-9">
-                                        <select className="form-control" id="category" data-init-plugin="select2"  onChange={(e)=>this.setState({uploadData:{...this.state.uploadData,category:e.target.value}})}>
-                                            {
-                                                this.state.catlist.map((data,index)=> 
-                                                <option value={index}>{data}</option> )
-                                            }
-                                        </select>
-                                    </div>
-                                </div>
-                                <div className="form-group row">
-                                    <label for="staticEmail" className="col-sm-2 col-form-label text-right mr-3">รายละเอียดสินค้า</label>
-                                    <div className="col-sm-9">
-                                        <textarea className="form-control" id="productdesc" rows="5" onChange={(e)=>this.setState({uploadData:{...this.state.uploadData,productdesc:e.target.value}})}></textarea>
-                                    </div>
-                                </div>
-                                <div className="form-group row">
-                                    <label for="staticEmail" className="col-sm-2 col-form-label text-right mr-3">ราคาสินค้า (บาท)</label>
-                                    <div className="col-sm-9">
-                                        <input type="number" className="form-control" id="price" onChange={(e)=>this.setState({uploadData:{...this.state.uploadData,price:e.target.value}})} />
-                                    </div>
-                                </div>
-                                <div className="form-group row">
-                                    <label for="staticEmail" className="col-sm-2 col-form-label text-right mr-3">จำนวนสินค้า</label>
-                                    <div className="col-sm-9">
-                                        <input type="number" className="form-control" id="quantity" onChange={(e)=>this.setState({uploadData:{...this.state.uploadData,quantity:e.target.value}})} />
-                                    </div>
-                                </div>
-                                <div className="form-group row">
-                                    <label for="staticEmail" className="col-sm-2 col-form-label text-right mr-3">รูปสินค้าหลัก</label>
-                                    <div className="col-sm-9">
-                                        <input type="text" className="form-control" id="imglink" onChange={(e)=>this.setState({uploadData:{...this.state.uploadData,img:e.target.value}})} />
-                                    </div>
-                                </div>
-                            <hr />
-                            <div className="row">
-                                <div className="col-11">
-                                    <button className="btn btn-success pull-right" onClick={this.upload}>Save</button>
-                                    <Link href="productmanagement">
-                                        <button className="btn btn-danger pull-right mr-2">Cancel</button>
-                                    </Link>
-                                </div>
-                            </div>
-                            
-                        </Portlet>
-            </div>
-        )
-        if(this.state.query !== -1){
-            S = () =>(
-                <div>
-                    <Portlet>
-                                <div className="form-group row">
-                                    <label for="staticEmail" className="col-sm-2 col-form-label text-right mr-3">ชื่อสินค้า</label>
-                                    <div className="col-sm-9">
-                                        <input type="text" className="form-control" value={this.state.uploadData.productname} id="productname" onChange={(e)=>this.setState({uploadData:{...this.state.uploadData,productname:e.target.value}})} />
-                                    </div>
-                                </div>
-                                <div className="form-group row">
-                                    <label for="inputPassword" className="col-sm-2 col-form-label text-right mr-3">หมวดหมู่</label>
-                                    <div className="col-sm-9">
-                                        <select className="form-control" id="category" data-init-plugin="select2"  onChange={(e)=>this.setState({uploadData:{...this.state.uploadData,category:e.target.value}})}>
-                                            {
-                                                this.state.catlist.map((data,index)=> 
-                                                <option value={index}>{data}</option> )
-                                            }
-                                        </select>
-                                    </div>
-                                </div>
-                                <div className="form-group row">
-                                    <label for="staticEmail" className="col-sm-2 col-form-label text-right mr-3">รายละเอียดสินค้า</label>
-                                    <div className="col-sm-9">
-                                        <textarea className="form-control" value={this.state.uploadData.productdesc} id="productdesc" rows="5" onChange={(e)=>this.setState({uploadData:{...this.state.uploadData,productdesc:e.target.value}})}></textarea>
-                                    </div>
-                                </div>
-                                <div className="form-group row">
-                                    <label for="staticEmail" className="col-sm-2 col-form-label text-right mr-3">ราคาสินค้า (บาท)</label>
-                                    <div className="col-sm-9">
-                                        <input type="number" className="form-control" value={this.state.uploadData.price} id="price" onChange={(e)=>this.setState({uploadData:{...this.state.uploadData,price:e.target.value}})} />
-                                    </div>
-                                </div>
-                                <div className="form-group row">
-                                    <label for="staticEmail" className="col-sm-2 col-form-label text-right mr-3">จำนวนสินค้า</label>
-                                    <div className="col-sm-9">
-                                        <input type="number" className="form-control" id="quantity" value={this.state.uploadData.quantity} onChange={(e)=>this.setState({uploadData:{...this.state.uploadData,quantity:e.target.value}})} />
-                                    </div>
-                                </div>
-                                <div className="form-group row">
-                                    <label for="staticEmail" className="col-sm-2 col-form-label text-right mr-3">รูปสินค้าหลัก</label>
-                                    <div className="col-sm-9">
-                                        <input type="text" className="form-control" id="imglink" value={this.state.uploadData.img} onChange={(e)=>this.setState({uploadData:{...this.state.uploadData,img:e.target.value}})} />
-                                    </div>
-                                </div>
-                                
-                            <hr />
-                            <div className="row">
-                                <div className="col-11">
-                                    <button className="btn btn-success pull-right" onClick={this.update}>Save</button>
-                                    <Link href="productmanagement">
-                                        <button className="btn btn-danger pull-right mr-2">Cancel</button>
-                                    </Link>
-                                </div>
-                            </div>
-                            
-                        </Portlet>
-                </div>
-            )
-        }
-    
+   
         return(
         <div>
             <AdminLayout>
                 <div className="row">
                     <div className="col-12">
-                    {
-                        <S />
-                    }                        
+                    <Portlet>
+                                <div className="form-group row">
+                                    <label for="staticEmail" className="col-sm-2 col-form-label text-right mr-3">ชื่อสินค้า</label>
+                                    <div className="col-sm-9">
+                                    {
+                                        this.state.query == -1 ? 
+                                            (<input type="text" className="form-control" id="productname" onChange={(e)=>this.setState({uploadData:{...this.state.uploadData,productname:e.target.value}})} />) :
+                                            (<input type="text" className="form-control" value={this.state.uploadData.productname} id="productname" onChange={(e)=>this.setState({uploadData:{...this.state.uploadData,productname:e.target.value}})} />)
+                                    }
+                                        
+                                    </div>
+                                </div>
+                                <div className="form-group row">
+                                    <label for="inputPassword" className="col-sm-2 col-form-label text-right mr-3">หมวดหมู่</label>
+                                    <div className="col-sm-9">
+                                        <select className="form-control" id="category" data-init-plugin="select2"  onChange={(e)=>this.setState({uploadData:{...this.state.uploadData,category:e.target.value}})}>
+                                            {
+                                                this.state.catlist.map((data,index)=> 
+                                                <option value={index}>{data}</option> )
+                                            }
+                                        </select>
+                                    </div>
+                                </div>
+                                <div className="form-group row">
+                                    <label for="staticEmail" className="col-sm-2 col-form-label text-right mr-3">รายละเอียดสินค้า</label>
+                                    <div className="col-sm-9">
+                                    {
+                                        this.state.query == -1 ? 
+                                            (<textarea className="form-control" id="productdesc" rows="5" onChange={(e)=>this.setState({uploadData:{...this.state.uploadData,productdesc:e.target.value}})}></textarea>) :
+                                            (<textarea className="form-control" value={this.state.uploadData.productdesc} id="productdesc" rows="5" onChange={(e)=>this.setState({uploadData:{...this.state.uploadData,productdesc:e.target.value}})}></textarea>)
+                                    }
+                                        
+                                    </div>
+                                </div>
+                                <div className="form-group row">
+                                    <label for="staticEmail" className="col-sm-2 col-form-label text-right mr-3">ราคาสินค้า (บาท)</label>
+                                    <div className="col-sm-9">
+                                    {
+                                        this.state.query == -1 ? 
+                                            (<input type="number" className="form-control" id="price" onChange={(e)=>this.setState({uploadData:{...this.state.uploadData,price:e.target.value}})} />) :
+                                            (<input type="number" className="form-control" value={this.state.uploadData.price} id="price" onChange={(e)=>this.setState({uploadData:{...this.state.uploadData,price:e.target.value}})} />)
+                                    }
+                                        
+                                    </div>
+                                </div>
+                                <div className="form-group row">
+                                    <label for="staticEmail" className="col-sm-2 col-form-label text-right mr-3">จำนวนสินค้า</label>
+                                    <div className="col-sm-9">
+                                    {
+                                        this.state.query == -1 ? 
+                                            (<input type="number" className="form-control" id="quantity" onChange={(e)=>this.setState({uploadData:{...this.state.uploadData,quantity:e.target.value}})} />) :
+                                            (<input type="number" className="form-control" id="quantity" value={this.state.uploadData.quantity} onChange={(e)=>this.setState({uploadData:{...this.state.uploadData,quantity:e.target.value}})} />)
+                                    }
+                                        
+                                    </div>
+                                </div>
+                                <div className="form-group row">
+                                    <label for="staticEmail" className="col-sm-2 col-form-label text-right mr-3">รูปสินค้าหลัก</label>
+                                    <div className="col-sm-9">
+                                    {
+                                        this.state.query == -1 ? 
+                                            (<input type="text" className="form-control" id="imglink" onChange={(e)=>this.setState({uploadData:{...this.state.uploadData,img:e.target.value}})} />) :
+                                            (<input type="text" className="form-control" id="imglink" value={this.state.uploadData.img} onChange={(e)=>this.setState({uploadData:{...this.state.uploadData,img:e.target.value}})} />)
+                                    }
+                                    </div>
+                                </div>
+                            <hr />
+                            <div className="row">
+                                <div className="col-11">
+                                    {
+                                        this.state.query == -1 ? 
+                                            (<button className="btn btn-success pull-right" onClick={this.upload}>Save</button>) :
+                                            (<button className="btn btn-success pull-right" onClick={this.update}>Save</button>)
+                                    }
+                                    
+                                    <Link href="productmanagement">
+                                        <button className="btn btn-danger pull-right mr-2">Cancel</button>
+                                    </Link>
+                                </div>
+                            </div>
+                </Portlet>
                     </div>
                 </div>
             </AdminLayout>

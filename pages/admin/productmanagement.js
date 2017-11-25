@@ -90,7 +90,31 @@ class ProductManagement extends React.Component {
             query: { productID: pid }
         })
     }
-    
+    del = async(pid) =>{
+        await Axios({
+            method:'post',
+            url:`http://localhost:3001/admin/product/del/${pid}`,
+        })
+        .then(async function(res) {
+            console.log(res)
+            await location.reload()
+        });
+    }
+    updateStatus = async(pid,statusID) =>{
+        await Axios({
+            method:'post',
+            url:`http://localhost:3001/admin/product/updatestatus/${pid}${statusID}`,
+        })
+        .then(async function(res) {
+            if(res.data.status == true){
+                await location.reload()
+            }
+            else if(res.data.status == false){
+                alert(response.data.msg)
+            }
+        });
+        
+    }
     render(){
         return(
             <div>
@@ -141,14 +165,20 @@ class ProductManagement extends React.Component {
                                                     <p>{data.Quantity}</p>
                                                 </td>
                                                 <td className="v-align-middle">
+                                                {data.StatusID==1 ? (
                                                     <label className="switch">
-                                                        <input type="checkbox" />
+                                                        <input type="checkbox" onChange={() => this.updateStatus(data.ProductID,0)} checked/>
                                                         <span className="slider round"></span>
-                                                    </label>
+                                                    </label>) : 
+                                                    (<label className="switch">
+                                                        <input type="checkbox" onChange={() => this.updateStatus(data.ProductID,1)} />
+                                                        <span className="slider round"></span>
+                                                    </label>)
+                                                }   
                                                 </td>
                                                 <td className="v-align-middle">
                                                     <button className="btn btn-primary m-b-10" type="button" onClick={()=>this.goEditProd(data.ProductID)}><i className="pg-form"></i></button>
-                                                    <button className="btn btn-danger m-b-10 mx-1" type="button"><i className="pg-trash"></i></button>
+                                                    <button className="btn btn-danger m-b-10 mx-1" type="button" onClick={()=>this.del(data.ProductID)}><i className="pg-trash"></i></button>
                                                 </td>
                                             </tr>
                                             )
