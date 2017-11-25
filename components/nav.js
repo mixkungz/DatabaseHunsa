@@ -1,7 +1,7 @@
 import styled , {injectGlobal} from 'styled-components'
 import SweetAlert from 'sweetalert2-react'
 import Axios from 'axios'
-
+import Link from 'next/link'
 injectGlobal`
     .awesome-border{
         border-left:1px solid white;
@@ -244,7 +244,7 @@ export default class extends React.Component{
                                             this.state.userDetail ? 
                                             <span>
                                                 <span>
-                                                    <span className="badge badge-light ">Edit Profile</span>
+                                                    <Link href="/updateprofile"><span className="badge badge-light ">Edit Profile</span></Link>
                                                     <span className="badge badge-danger mx-1" onClick={this.logout}>Logout</span>
                                                 </span>
                                                 
@@ -263,7 +263,7 @@ export default class extends React.Component{
                             </div>
                             <div className="row">
                                 <div className="col-2 my-1">
-                                    <img className="img-fluid" src="/static/img/Shopy-new.png" />
+                                    <Link href="/"><img className="img-fluid" src="/static/img/Shopy-new.png" /></Link>
                                 </div>
                                 <div className="col-8 my-4">
                                     <input className="form-control" type="search" placeholder="Search" aria-label="Search"  />
