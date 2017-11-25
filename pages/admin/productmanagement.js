@@ -71,7 +71,8 @@ injectGlobal`
 `
 class ProductManagement extends React.Component {
     state={
-        allproduct:[]
+        allproduct:[],
+        userDetail:null
     }
     componentWillMount = async() =>{
         let allProd =await Axios({
@@ -115,10 +116,18 @@ class ProductManagement extends React.Component {
         });
         
     }
+    componentDidMount = async () =>{
+        await this.setState({
+            userDetail:JSON.parse(window.localStorage.getItem("userdetail"))
+        })
+    }
     render(){
         return(
             <div>
-            <AdminLayout>
+                {
+                    this.state.userDetail ?
+                    this.state.userDetail.RoleID === 1 ?
+<AdminLayout>
                 <div className="row">
                     <div className="col-12">
                         <Portlet>
@@ -190,7 +199,10 @@ class ProductManagement extends React.Component {
                         </Portlet>
                     </div>
                 </div>
-            </AdminLayout>
+            </AdminLayout>:<div> คุณไม่ใช่แอดมิน </div>
+                    : <div>โปรดล็อคอินมาก่อน</div>
+                }
+            
         </div>
         )
     }

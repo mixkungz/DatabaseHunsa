@@ -24,6 +24,7 @@ class ProductManagement extends React.Component {
         },
         catlist :[],
         query:-1,
+        userDetail:null
         
     }
     
@@ -57,6 +58,11 @@ class ProductManagement extends React.Component {
                 return res
           });
         this.setState({catlist : catlist.data})
+    }
+    componentDidMount = async () =>{
+        await this.setState({
+            userDetail:JSON.parse(window.localStorage.getItem("userdetail"))
+        })
     }
 
     upload = async() =>{
@@ -180,7 +186,10 @@ class ProductManagement extends React.Component {
    
         return(
         <div>
-            <AdminLayout>
+            {
+                this.state.userDetail ?
+                this.state.userDetail.RoleID === 1 ?
+                <AdminLayout>
                 <div className="row">
                     <div className="col-12">
                     <Portlet>
@@ -266,7 +275,11 @@ class ProductManagement extends React.Component {
                 </Portlet>
                     </div>
                 </div>
-            </AdminLayout>
+            </AdminLayout> :
+                        <div> คุณไม่ใช่แอดมิน </div>
+                    : <div>โปรดล็อคอินมาก่อน</div>
+            }
+            
         </div>
         )
     }

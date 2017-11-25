@@ -6,7 +6,8 @@ import Axios from 'axios'
 
 class ProductManagement extends React.Component{
 	state={
-		alluser : []
+		alluser : [],
+		userDetail : null
 	}
 	componentWillMount = async() =>{
 		let x =await Axios({
@@ -29,10 +30,18 @@ class ProductManagement extends React.Component{
             console.log(res)
             await location.reload()
         });
+	}
+	componentDidMount = async () =>{
+        await this.setState({
+            userDetail:JSON.parse(window.localStorage.getItem("userdetail"))
+        })
     }
 	render(){
 		return(
 			<div>
+				{
+                    this.state.userDetail ?
+                    this.state.userDetail.RoleID === 1 ?
 					<AdminLayout>
 						<div className="row">
 							<div className="col-12">
@@ -86,7 +95,8 @@ class ProductManagement extends React.Component{
 								</Portlet>
 							</div>
 						</div>
-					</AdminLayout>
+					</AdminLayout>:<div> คุณไม่ใช่แอดมิน </div>
+                    : <div>โปรดล็อคอินมาก่อน</div>
 			</div>
 		)
 	}

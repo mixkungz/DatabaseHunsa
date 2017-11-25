@@ -11,7 +11,8 @@ injectGlobal`
 
 class Dashboard extends React.Component{
     state={
-        useramout:0
+        useramout:0,
+        userDetail:null
     }
     componentWillMount = async()=>{
         let data = await Axios({
@@ -25,20 +26,30 @@ class Dashboard extends React.Component{
         console.log(this.state.useramout)
 
     }
-    
+    componentDidMount = async () =>{
+        await this.setState({
+            userDetail:JSON.parse(window.localStorage.getItem("userdetail"))
+        })
+    }
     render(){
         return(
             <div>
-                <AdminLayout>
-                    <div className="row">
-                        <div className="col-lg-2 m-b-10">
-                            <Card topic="All Users" value={this.state.useramout} myclass="fa fa-user mx-2 mr-3" />
-                        </div>
-                        <div className="col-lg-3 m-b-10">
-                            <Card topic="Income" value="0" myclass="fa fa-money mx-2 mr-3" />
-                        </div>
-                    </div>
-                </AdminLayout>  
+                {
+                    this.state.userDetail ?
+                        this.state.userDetail.RoleID === 1 ?
+                        <AdminLayout>
+                            <div className="row">
+                                <div className="col-lg-2 m-b-10">
+                                    <Card topic="All Users" value={this.state.useramout} myclass="fa fa-user mx-2 mr-3" />
+                                </div>
+                                <div className="col-lg-3 m-b-10">
+                                    <Card topic="Income" value="0" myclass="fa fa-money mx-2 mr-3" />
+                                </div>
+                            </div>
+                        </AdminLayout>  :
+                        <div> คุณไม่ใช่แอดมิน </div>
+                    : <div>โปรดล็อคอินมาก่อน</div>
+                }
             </div>
         )
     }

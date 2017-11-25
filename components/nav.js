@@ -60,7 +60,9 @@ injectGlobal`
         background-color:#c9a402;
         transition:0.5s;
     }
-
+    .swal2-modal .swal2-buttonswrapper{
+        justify-content:center
+    }
 `
 
 
@@ -75,7 +77,10 @@ export default class extends React.Component{
             email:null,
             firstname:null,
             lastname:null
-        }
+        },
+        username : '',
+        password :'',
+        userDetail:null
     }
 
     register = async () => {
@@ -119,6 +124,7 @@ export default class extends React.Component{
             alert('Please check password')
         }
         else{
+            console.log('send to node')
             await Axios({
                 method: 'post',
                 url: 'http://localhost:3001/user/newuser',
@@ -129,9 +135,10 @@ export default class extends React.Component{
                   firstname: firstname,
                   lastname: lastname
                 }
-            }).then(function (response) {
+            }).then(async function (response) {
                 if(response.data == 'success'){
                     alert('Register success!!')
+                    await location.reload()
                 }
                 if(response.data == 'ER_DUP_ENTRY'){
                     const usernameform = document.getElementById('username')
@@ -145,8 +152,56 @@ export default class extends React.Component{
         }
         
     }
+    login= async()=>{
+        await Axios({
+            method: 'post',
+            url: 'http://localhost:3001/user/login',
+            data: {
+              username: this.state.username,
+              password: this.state.password,
+            }
+        }).then(async function (response) {
+            console.log(response.data)
+            console.log(response.data[0])
+            if(response.data == false){
+                alert('username / password ผิด')
+            }
+            else{
+                alert('login')
+                window.localStorage.setItem('userdetail',JSON.stringify(response.data[0]));
+                await location.reload()
+            }
+          })
+          .catch(function (error) {
+            
+          });
+        console.log('shoot')
+    }
+    componentDidMount = async () =>{
+        // console.log(JSON.parse(window.localStorage.getItem("userdetail")))
+        await this.setState({
+            userDetail:JSON.parse(window.localStorage.getItem("userdetail"))
+        })
 
+    }
+    logout = async() =>{
+        localStorage.removeItem("userdetail");
+        console.log('logout')
+        await location.reload()
+    }
+    search = async() =>{
+        console.log('555555555555')
+        await swal({
+            title: '( ͡° ͜ʖ ͡°)',
+            text: 'Future Fuction',
+            timer: 2000,
+            onOpen: () => {
+                swal.showLoading()
+            }
+        })
+    }
     render(){
+        console.log(this.state)
         return(
                 <div>
                     <nav className="bg-secondary">
@@ -173,8 +228,24 @@ export default class extends React.Component{
                                         </table>
                                             </div>
                                         </div>
-                                        <li className="list-inline-item px-3 awesome-border" data-toggle="modal" data-target="#register">Sign up</li>
-                                        <li className="list-inline-item px-3" data-toggle="modal" data-target="#login">Sign in</li>
+                                        {
+                                            this.state.userDetail ? 
+                                            <span>
+                                                <span>
+                                                    <span className="badge badge-light ">Edit Profile</span>
+                                                    <span className="badge badge-danger mx-1" onClick={this.logout}>Logout</span>
+                                                </span>
+                                                
+                                            </span>
+                                            :
+                                             <span>
+                                                 <li className="list-inline-item px-3 awesome-border" data-toggle="modal" data-target="#register">Sign up</li>
+                                                 <li className="list-inline-item px-3" data-toggle="modal" data-target="#login">Sign in</li>
+                                            </span>
+                                            
+                                        }
+                                       
+                                        
                                     </ul>
                                 </div>
                             </div>
@@ -183,10 +254,10 @@ export default class extends React.Component{
                                     <img className="img-fluid" src="/static/img/Shopy-new.png" />
                                 </div>
                                 <div className="col-8 my-4">
-                                    <input className="form-control" type="search" placeholder="Search" aria-label="Search" />
+                                    <input className="form-control" type="search" placeholder="Search" aria-label="Search"  />
                                 </div>
                                 <div className="col-2 my-4">
-                                    <button className="btn btn-outline-light" type="submit">Search</button>
+                                    <button className="btn btn-outline-light" type="submit" onClick={this.search}>Search</button>
                                 </div>
                             </div>
                         </div>
@@ -239,9 +310,9 @@ export default class extends React.Component{
                                 <div className="modal-body">
                                     <h3 className="mb-3">Sign in</h3>
                                     <div className="form-group">
-                                        <input type="text" className="form-control mb-3" id="username" placeholder="Username" />
-                                        <input type="password" className="form-control mb-3" id="password" placeholder="Password" />
-                                        <button type="button" className="btn btn-primary btn-block">Sign in</button>
+                                        <input type="text" className="form-control mb-3" value={this.state.username} onChange={(e)=> this.setState({...this.state,username:e.target.value})} id="username" placeholder="Username" />
+                                        <input type="password" className="form-control mb-3" value={this.state.password} onChange={(e)=> this.setState({...this.state,password:e.target.value})} id="password" placeholder="Password" />
+                                        <button type="button" className="btn btn-primary btn-block" onClick={this.login}>Sign in</button>
                                     </div>
                                 </div>
                             </div>
