@@ -1,6 +1,7 @@
 import styled , {injectGlobal} from 'styled-components'
 import SweetAlert from 'sweetalert2-react'
 import Axios from 'axios'
+import Router from 'next/router'
 import Link from 'next/link'
 injectGlobal`
     .awesome-border{
@@ -276,10 +277,14 @@ export default class extends React.Component{
                     </nav>
                     <div className="container-fluid">
                         <div className="row text-center">
-                            <div className="col" id="face">FACE</div>
-                            <div className="col" id="eyes">EYES</div>
-                            <div className="col" id="lips">LIPS</div>
-                            <div className="col" id="nails">NAILS</div>
+                        <div className="col" id="face" onClick={() => Router.push({pathname: '/productcat',
+    query: { category: 'face' }})}>FACE</div>
+                            <div className="col" id="eyes" onClick={() => Router.push({pathname: '/productcat',
+    query: { category: 'eyes' }})}>EYES</div>
+                            <div className="col" id="lips" onClick={() => Router.push({pathname: '/productcat',
+    query: { category: 'lips' }})}>LIPS</div>
+                            <div className="col" id="nails" onClick={() => Router.push({pathname: '/productcat',
+    query: { category: 'nails' }})}>NAILS</div>
                         </div>
                     </div>
                     <div className="modal fade" id="register" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

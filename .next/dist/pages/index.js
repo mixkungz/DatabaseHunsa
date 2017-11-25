@@ -112,8 +112,9 @@ var Main = function (_React$Component) {
                             allProd = _context.sent;
 
                             _this.setState({ allproduct: allProd.data });
+                            console.log(_this.state.allproduct);
 
-                        case 4:
+                        case 5:
                         case 'end':
                             return _context.stop();
                     }
@@ -155,96 +156,96 @@ var Main = function (_React$Component) {
             return _react2.default.createElement('div', {
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 51
+                    lineNumber: 52
                 }
             }, _react2.default.createElement(_head2.default, {
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 52
+                    lineNumber: 53
                 }
             }, _react2.default.createElement('title', {
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 53
+                    lineNumber: 54
                 }
             }, 'DatabaseHunsa | \u0E2B\u0E19\u0E49\u0E32\u0E2B\u0E25\u0E31\u0E01')), _react2.default.createElement(_carousel2.default, {
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 55
+                    lineNumber: 56
                 }
             }), _react2.default.createElement('div', {
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 56
+                    lineNumber: 57
                 }
             }, _react2.default.createElement('div', { className: 'container mt-3', __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 57
+                    lineNumber: 58
                 }
             }, _react2.default.createElement('div', { className: 'row', __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 58
+                    lineNumber: 59
                 }
             }, _react2.default.createElement('div', { className: 'col', __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 59
+                    lineNumber: 60
                 }
             }, _react2.default.createElement('p', {
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 60
+                    lineNumber: 61
                 }
             }, '\u0E2A\u0E34\u0E19\u0E04\u0E49\u0E32\u0E17\u0E31\u0E49\u0E07\u0E2B\u0E21\u0E14'), _react2.default.createElement('div', { className: 'row mb-3', __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 61
+                    lineNumber: 62
                 }
             }, this.state.allproduct.map(function (data) {
                 return _react2.default.createElement('div', { className: 'col-3', __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 65
+                        lineNumber: 66
                     }
                 }, data.StatusID == 1 ? _react2.default.createElement('div', { className: '', __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 68
+                        lineNumber: 69
                     }
                 }, _react2.default.createElement('div', { className: 'card mx-2', __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 69
+                        lineNumber: 70
                     }
                 }, _react2.default.createElement('div', { className: 'text-center', __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 70
+                        lineNumber: 71
                     }
                 }, _react2.default.createElement('img', { className: 'card-img-top mx-auto d-block', src: data.ProductImg, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 71
+                        lineNumber: 72
                     }
                 })), _react2.default.createElement('div', { className: 'card-body', __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 73
+                        lineNumber: 74
                     }
                 }, _react2.default.createElement('h5', { className: 'card-title', __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 74
+                        lineNumber: 75
                     }
                 }, data.ProductName), _react2.default.createElement('p', { className: 'text-danger', __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 75
+                        lineNumber: 76
                     }
                 }, data.ProductPrice, ' \u0E1A\u0E32\u0E17'), _react2.default.createElement('p', { className: 'text-center', __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 76
+                        lineNumber: 77
                     }
                 }, _react2.default.createElement('button', { className: 'btn btn-info btn-block', onClick: function onClick(e) {
                         return _this3.addToCart(e, data);
                     }, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 76
+                        lineNumber: 77
                     }
                 }, 'Add to cart'))))) : _react2.default.createElement('span', {
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 85
+                        lineNumber: 86
                     }
                 }));
             })), ' '), ' '), ' '), ' '));
@@ -255,4 +256,4 @@ var Main = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = (0, _layout2.default)(Main);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL2luZGV4LmpzIl0sIm5hbWVzIjpbIkhlYWQiLCJ3aXRoTGF5b3V0Iiwic3R5bGVkIiwiaW5qZWN0R2xvYmFsIiwiU2xpZGVyIiwiQ2Fyb3VzZWwiLCJBeGlvcyIsIk1haW4iLCJzdGF0ZSIsImFsbHByb2R1Y3QiLCJ1c2VyRGV0YWlsIiwiY29tcG9uZW50V2lsbE1vdW50IiwibWV0aG9kIiwidXJsIiwidGhlbiIsInJlcyIsImFsbFByb2QiLCJzZXRTdGF0ZSIsImRhdGEiLCJjb21wb25lbnREaWRNb3VudCIsIkpTT04iLCJwYXJzZSIsIndpbmRvdyIsImxvY2FsU3RvcmFnZSIsImdldEl0ZW0iLCJhZGRUb0NhcnQiLCJlIiwiYWxlcnQiLCJpdGVtcyIsInByb3BzIiwiaXRlbSIsInBhcmVudFRoaXMiLCJtYXAiLCJTdGF0dXNJRCIsIlByb2R1Y3RJbWciLCJQcm9kdWN0TmFtZSIsIlByb2R1Y3RQcmljZSIsIlJlYWN0IiwiQ29tcG9uZW50Il0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsQUFBTzs7OztBQUNQLEFBQU8sQUFBZ0I7Ozs7QUFDdkIsQUFBTyxBQUFXOzs7O0FBQ2xCLEFBQU87Ozs7QUFDUCxBQUFPLEFBQWM7Ozs7QUFDckIsQUFBTzs7Ozs7Ozs7OztBQUNQOztJLEFBU007Ozs7Ozs7Ozs7Ozs7Ozs0TSxBQUNGO3dCQUFNLEFBQ1MsQUFDWDt3QkFGRSxBLEFBRVM7QUFGVCxBQUNGLGlCQUdKLEEsOEZBQXFCLG1CQUFBO2dCQUFBOzBFQUFBOzBCQUFBO3FEQUFBOzZCQUFBOzRDQUFBOzt3Q0FDUSxBQUNkLEFBQ1A7cUNBRmUsQUFBTSxBQUVqQjtBQUZpQixBQUNyQiw2QkFEZSxFQUFBLEFBSWQsS0FBSyxVQUFBLEFBQVMsS0FBSyxBQUNoQjt1Q0FBQSxBQUFPLEFBQ1o7QUFQYyxBQUNFOzs2QkFBZjtBQURhLCtDQVFmOztrQ0FBQSxBQUFLLFNBQVMsRUFBQyxZQUFXLFFBUlgsQUFRZixBQUFjLEFBQW9COzs2QkFSbkI7NkJBQUE7NENBQUE7O0FBQUE7d0JBQUE7QSxtQixBQVdyQiw2RkFBb0Isb0JBQUE7NEVBQUE7MEJBQUE7dURBQUE7NkJBQUE7NkNBQUE7eUNBQ1YsQUFBSzs0Q0FDSSxLQUFBLEFBQUssTUFBTSxPQUFBLEFBQU8sYUFBUCxBQUFvQixRQUY5QixBQUNWLEFBQWMsQUFDTCxBQUFXLEFBQTRCO0FBRGxDLEFBQ2hCLDZCQURFOzs2QkFEVTs2QkFBQTs2Q0FBQTs7QUFBQTt5QkFBQTtBLG1CLEFBS3BCLFlBQVksVUFBQSxBQUFDLEdBQUQsQUFBSSxNQUFRLEFBQ3BCO2dCQUFHLE1BQUEsQUFBSyxNQUFMLEFBQVcsY0FBZCxBQUE0QixNQUFLLEFBQzdCO3NCQUFBLEFBQU0sQUFDVDtBQUZELG1CQUdJLEFBQ0E7b0JBQU0sbURBQVksTUFBQSxBQUFLLE1BQWpCLEFBQXVCLFFBQU0sRUFBRSxNQUFyQyxBQUFNLEFBQTZCLEFBQVEsQUFDM0M7c0JBQUEsQUFBSyxNQUFMLEFBQVcsV0FBWCxBQUFzQjsyQkFBdEIsQUFBK0IsQUFHbEM7QUFIa0MsQUFDM0I7QUFHWDtBOzs7OztpQ0FFUTt5QkFDUDs7bUNBQ0UsY0FBQTs7OEJBQUE7Z0NBQUEsQUFDUTtBQURSO0FBQUEsYUFBQSxrQkFDUSxBQUFDOzs4QkFBRDtnQ0FBQSxBQUNJO0FBREo7QUFBQSwrQkFDSSxjQUFBOzs4QkFBQTtnQ0FBQTtBQUFBO0FBQUEsZUFGWixBQUNRLEFBQ0ksQUFFSixzRkFBQSxBQUFDOzs4QkFBRDtnQ0FKUixBQUlRLEFBQ0E7QUFEQTtBQUFBLGdDQUNBLGNBQUE7OzhCQUFBO2dDQUFBLEFBQ0k7QUFESjtBQUFBLCtCQUNJLGNBQUEsU0FBSyxXQUFMLEFBQWU7OEJBQWY7Z0NBQUEsQUFDSTtBQURKOytCQUNJLGNBQUEsU0FBSyxXQUFMLEFBQWU7OEJBQWY7Z0NBQUEsQUFDSTtBQURKOytCQUNJLGNBQUEsU0FBSyxXQUFMLEFBQWU7OEJBQWY7Z0NBQUEsQUFDSTtBQURKOytCQUNJLGNBQUE7OzhCQUFBO2dDQUFBO0FBQUE7QUFBQSxlQURKLEFBQ0ksQUFDQSxtR0FBQSxjQUFBLFNBQUssV0FBTCxBQUFlOzhCQUFmO2dDQUFBLEFBR1k7QUFIWjtvQkFHWSxBQUFLLE1BQUwsQUFBVyxXQUFYLEFBQXNCLElBQUksVUFBQSxBQUFDLE1BQUQ7dUNBQ3RCLGNBQUEsU0FBSyxXQUFMLEFBQWU7a0NBQWY7b0NBQUEsQUFDSztBQURMO2lCQUFBLE9BQ0ssQUFBSyxZQUFMLEFBQWUsb0JBRVosY0FBQSxTQUFLLFdBQUwsQUFBZTtrQ0FBZjtvQ0FBQSxBQUNJO0FBREo7aUJBQUEsa0JBQ0ksY0FBQSxTQUFLLFdBQUwsQUFBZTtrQ0FBZjtvQ0FBQSxBQUNJO0FBREo7bUNBQ0ksY0FBQSxTQUFLLFdBQUwsQUFBZTtrQ0FBZjtvQ0FBQSxBQUNJO0FBREo7MERBQ1MsV0FBTCxBQUFlLGdDQUErQixLQUFLLEtBQW5ELEFBQXdEO2tDQUF4RDtvQ0FGUixBQUNJLEFBQ0ksQUFFSjtBQUZJO3FDQUVKLGNBQUEsU0FBSyxXQUFMLEFBQWU7a0NBQWY7b0NBQUEsQUFDSTtBQURKO21DQUNJLGNBQUEsUUFBSSxXQUFKLEFBQWM7a0NBQWQ7b0NBQUEsQUFBNEI7QUFBNUI7d0JBREosQUFDSSxBQUFpQyxBQUNqQyw4QkFBQSxjQUFBLE9BQUcsV0FBSCxBQUFhO2tDQUFiO29DQUFBLEFBQTRCO0FBQTVCO3dCQUFBLEFBQWlDLGNBRnJDLEFBRUksQUFDQSx3Q0FBQSxjQUFBLE9BQUcsV0FBSCxBQUFhO2tDQUFiO29DQUFBLEFBQTJCO0FBQTNCO21DQUEyQixjQUFBLFlBQVEsV0FBUixBQUFrQiwwQkFBeUIsU0FBUyxpQkFBQSxBQUFDLEdBQUQ7K0JBQU8sT0FBQSxBQUFLLFVBQUwsQUFBZSxHQUF0QixBQUFPLEFBQWtCO0FBQTdFO2tDQUFBO29DQUFBO0FBQUE7bUJBVjFDLEFBRUcsQUFDSSxBQUlJLEFBR0ksQUFBMkI7O2tDQVN2QztvQ0FyQmMsQUFDdEIsQUFvQlE7QUFBQTtBQUFBLGlCQUFBO0FBMUI1QixBQUVJLEFBR1ksaUJBTnBCLEFBQ0ksTUFGUixBQUNJLE1BRlIsQUFDSSxNQVBkLEFBQ0UsQUFLUSxBQTZDWDs7Ozs7RUFyRmMsZ0IsQUFBTSxBQXdGekI7O2tCQUFlLHNCQUFmLEFBQWUsQUFBVyIsImZpbGUiOiJpbmRleC5qcz9lbnRyeSIsInNvdXJjZVJvb3QiOiIvVXNlcnMvcGhhY2hhcmEvRGVza3RvcC9Qcm9qZWN0LzIwMTcvSG9tZXdvcmsvRGF0YWJhc2VIdW5zYSJ9
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL2luZGV4LmpzIl0sIm5hbWVzIjpbIkhlYWQiLCJ3aXRoTGF5b3V0Iiwic3R5bGVkIiwiaW5qZWN0R2xvYmFsIiwiU2xpZGVyIiwiQ2Fyb3VzZWwiLCJBeGlvcyIsIk1haW4iLCJzdGF0ZSIsImFsbHByb2R1Y3QiLCJ1c2VyRGV0YWlsIiwiY29tcG9uZW50V2lsbE1vdW50IiwibWV0aG9kIiwidXJsIiwidGhlbiIsInJlcyIsImFsbFByb2QiLCJzZXRTdGF0ZSIsImRhdGEiLCJjb25zb2xlIiwibG9nIiwiY29tcG9uZW50RGlkTW91bnQiLCJKU09OIiwicGFyc2UiLCJ3aW5kb3ciLCJsb2NhbFN0b3JhZ2UiLCJnZXRJdGVtIiwiYWRkVG9DYXJ0IiwiZSIsImFsZXJ0IiwiaXRlbXMiLCJwcm9wcyIsIml0ZW0iLCJwYXJlbnRUaGlzIiwibWFwIiwiU3RhdHVzSUQiLCJQcm9kdWN0SW1nIiwiUHJvZHVjdE5hbWUiLCJQcm9kdWN0UHJpY2UiLCJSZWFjdCIsIkNvbXBvbmVudCJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLEFBQU87Ozs7QUFDUCxBQUFPLEFBQWdCOzs7O0FBQ3ZCLEFBQU8sQUFBVzs7OztBQUNsQixBQUFPOzs7O0FBQ1AsQUFBTyxBQUFjOzs7O0FBQ3JCLEFBQU87Ozs7Ozs7Ozs7QUFDUDs7SSxBQVNNOzs7Ozs7Ozs7Ozs7Ozs7NE0sQUFDRjt3QkFBTSxBQUNTLEFBQ1g7d0JBRkUsQUFFUyxBO0FBRlQsQUFDRixpQkFHSixBLDhGQUFxQixtQkFBQTtnQkFBQTswRUFBQTswQkFBQTtxREFBQTs2QkFBQTs0Q0FBQTs7d0NBQ1EsQUFDZCxBQUNQO3FDQUZlLEFBQU0sQUFFakI7QUFGaUIsQUFDckIsNkJBRGUsRUFBQSxBQUlkLEtBQUssVUFBQSxBQUFTLEtBQUssQUFDaEI7dUNBQUEsQUFBTyxBQUNaO0FBUGMsQUFDRTs7NkJBQWY7QUFEYSwrQ0FRZjs7a0NBQUEsQUFBSyxTQUFTLEVBQUMsWUFBVyxRQUExQixBQUFjLEFBQW9CLEFBQ2xDO29DQUFBLEFBQVEsSUFBSSxNQUFBLEFBQUssTUFURixBQVNmLEFBQXVCOzs2QkFUUjs2QkFBQTs0Q0FBQTs7QUFBQTt3QkFBQTtBLG1CQVlyQixBLDZGQUFvQixvQkFBQTs0RUFBQTswQkFBQTt1REFBQTs2QkFBQTs2Q0FBQTt5Q0FDVixBQUFLOzRDQUNJLEtBQUEsQUFBSyxNQUFNLE9BQUEsQUFBTyxhQUFQLEFBQW9CLFFBRjlCLEFBQ1YsQUFBYyxBQUNMLEFBQVcsQUFBNEI7QUFEbEMsQUFDaEIsNkJBREU7OzZCQURVOzZCQUFBOzZDQUFBOztBQUFBO3lCQUFBO0EsbUIsQUFLcEIsWUFBWSxVQUFBLEFBQUMsR0FBRCxBQUFJLE1BQVEsQUFDcEI7Z0JBQUcsTUFBQSxBQUFLLE1BQUwsQUFBVyxjQUFkLEFBQTRCLE1BQUssQUFDN0I7c0JBQUEsQUFBTSxBQUNUO0FBRkQsbUJBR0ksQUFDQTtvQkFBTSxtREFBWSxNQUFBLEFBQUssTUFBakIsQUFBdUIsUUFBTSxFQUFFLE1BQXJDLEFBQU0sQUFBNkIsQUFBUSxBQUMzQztzQkFBQSxBQUFLLE1BQUwsQUFBVyxXQUFYLEFBQXNCOzJCQUF0QixBQUErQixBQUdsQztBQUhrQyxBQUMzQjtBQUdYO0E7Ozs7O2lDQUVRO3lCQUNQOzttQ0FDRSxjQUFBOzs4QkFBQTtnQ0FBQSxBQUNRO0FBRFI7QUFBQSxhQUFBLGtCQUNRLEFBQUM7OzhCQUFEO2dDQUFBLEFBQ0k7QUFESjtBQUFBLCtCQUNJLGNBQUE7OzhCQUFBO2dDQUFBO0FBQUE7QUFBQSxlQUZaLEFBQ1EsQUFDSSxBQUVKLHNGQUFBLEFBQUM7OzhCQUFEO2dDQUpSLEFBSVEsQUFDQTtBQURBO0FBQUEsZ0NBQ0EsY0FBQTs7OEJBQUE7Z0NBQUEsQUFDSTtBQURKO0FBQUEsK0JBQ0ksY0FBQSxTQUFLLFdBQUwsQUFBZTs4QkFBZjtnQ0FBQSxBQUNJO0FBREo7K0JBQ0ksY0FBQSxTQUFLLFdBQUwsQUFBZTs4QkFBZjtnQ0FBQSxBQUNJO0FBREo7K0JBQ0ksY0FBQSxTQUFLLFdBQUwsQUFBZTs4QkFBZjtnQ0FBQSxBQUNJO0FBREo7K0JBQ0ksY0FBQTs7OEJBQUE7Z0NBQUE7QUFBQTtBQUFBLGVBREosQUFDSSxBQUNBLG1HQUFBLGNBQUEsU0FBSyxXQUFMLEFBQWU7OEJBQWY7Z0NBQUEsQUFHWTtBQUhaO29CQUdZLEFBQUssTUFBTCxBQUFXLFdBQVgsQUFBc0IsSUFBSSxVQUFBLEFBQUMsTUFBRDt1Q0FDdEIsY0FBQSxTQUFLLFdBQUwsQUFBZTtrQ0FBZjtvQ0FBQSxBQUNLO0FBREw7aUJBQUEsT0FDSyxBQUFLLFlBQUwsQUFBZSxvQkFFWixjQUFBLFNBQUssV0FBTCxBQUFlO2tDQUFmO29DQUFBLEFBQ0k7QUFESjtpQkFBQSxrQkFDSSxjQUFBLFNBQUssV0FBTCxBQUFlO2tDQUFmO29DQUFBLEFBQ0k7QUFESjttQ0FDSSxjQUFBLFNBQUssV0FBTCxBQUFlO2tDQUFmO29DQUFBLEFBQ0k7QUFESjswREFDUyxXQUFMLEFBQWUsZ0NBQStCLEtBQUssS0FBbkQsQUFBd0Q7a0NBQXhEO29DQUZSLEFBQ0ksQUFDSSxBQUVKO0FBRkk7cUNBRUosY0FBQSxTQUFLLFdBQUwsQUFBZTtrQ0FBZjtvQ0FBQSxBQUNJO0FBREo7bUNBQ0ksY0FBQSxRQUFJLFdBQUosQUFBYztrQ0FBZDtvQ0FBQSxBQUE0QjtBQUE1Qjt3QkFESixBQUNJLEFBQWlDLEFBQ2pDLDhCQUFBLGNBQUEsT0FBRyxXQUFILEFBQWE7a0NBQWI7b0NBQUEsQUFBNEI7QUFBNUI7d0JBQUEsQUFBaUMsY0FGckMsQUFFSSxBQUNBLHdDQUFBLGNBQUEsT0FBRyxXQUFILEFBQWE7a0NBQWI7b0NBQUEsQUFBMkI7QUFBM0I7bUNBQTJCLGNBQUEsWUFBUSxXQUFSLEFBQWtCLDBCQUF5QixTQUFTLGlCQUFBLEFBQUMsR0FBRDsrQkFBTyxPQUFBLEFBQUssVUFBTCxBQUFlLEdBQXRCLEFBQU8sQUFBa0I7QUFBN0U7a0NBQUE7b0NBQUE7QUFBQTttQkFWMUMsQUFFRyxBQUNJLEFBSUksQUFHSSxBQUEyQjs7a0NBU3ZDO29DQXJCYyxBQUN0QixBQW9CUTtBQUFBO0FBQUEsaUJBQUE7QUExQjVCLEFBRUksQUFHWSxpQkFOcEIsQUFDSSxNQUZSLEFBQ0ksTUFGUixBQUNJLE1BUGQsQUFDRSxBQUtRLEFBNkNYOzs7OztFQXRGYyxnQixBQUFNLEFBeUZ6Qjs7a0JBQWUsc0JBQWYsQUFBZSxBQUFXIiwiZmlsZSI6ImluZGV4LmpzP2VudHJ5Iiwic291cmNlUm9vdCI6Ii9Vc2Vycy9waGFjaGFyYS9EZXNrdG9wL1Byb2plY3QvMjAxNy9Ib21ld29yay9EYXRhYmFzZUh1bnNhIn0=

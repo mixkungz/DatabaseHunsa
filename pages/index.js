@@ -27,6 +27,7 @@ class Main extends React.Component {
                 return res
           });
           this.setState({allproduct:allProd.data})
+          console.log(this.state.allproduct)
         
     }
     componentDidMount = async () =>{
