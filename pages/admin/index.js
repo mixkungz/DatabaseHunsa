@@ -50,8 +50,9 @@ class Login extends React.Component{
                     <div className="container-fluid">
                         <div className="row">
                             <div className="col">
+                                        <h1>Admin Login</h1>
                                         <div class="form-group">
-                                            <label for="exampleInputEmail1">Email address</label>
+                                            <label for="exampleInputEmail1">Username</label>
                                             <input type="email" class="form-control" onChange={(e)=>this.setState({inputusername:e.target.value})}  />
                                         </div>
                                         <div class="form-group">

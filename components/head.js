@@ -10,7 +10,7 @@ const MyHead = () => (
             <meta http-equiv="X-UA-Compatible" content="ie=edge" />
             <link rel='stylesheet' href='/static/css/bootstrap.min.css' />
             <link rel='stylesheet' href='/static/css/font-awesome.min.css' />
-            <link rel='stylesheet' href='/static/css/sweetalert2.min.css' />
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.0.5/sweetalert2.css"/>            
             <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
             <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
             <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />

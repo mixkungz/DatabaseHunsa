@@ -53,7 +53,7 @@ var MyHead = function MyHead() {
             fileName: _jsxFileName,
             lineNumber: 12
         }
-    }), _react2.default.createElement("link", { rel: "stylesheet", href: "/static/css/sweetalert2.min.css", __source: {
+    }), _react2.default.createElement("link", { rel: "stylesheet", href: "https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.0.5/sweetalert2.css", __source: {
             fileName: _jsxFileName,
             lineNumber: 13
         }

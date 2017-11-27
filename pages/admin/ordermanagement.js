@@ -2,12 +2,22 @@ import AdminLayout from '../../components/adminlayout'
 import Portlet from '../../components/portlet'
 import Card from '../../components/card'
 import styled , { injectGlobal } from 'styled-components'
+import Axios from 'axios'
 
 class ProductManagement extends React.Component{
 	state={
-		userDetail:null
+		userDetail:null,
+		allProduct:[]
 	}
-
+	componentWillMount = async() =>{
+		let data = await Axios({
+            method:'get',
+            url:'http://localhost:3001/admin/allorder',
+		})
+		this.setState({allProduct:data.data})
+		console.log(this.state.allProduct)
+        
+	}
 	componentDidMount = async () =>{
         await this.setState({
             userDetail:JSON.parse(window.localStorage.getItem("userdetail"))
@@ -33,35 +43,36 @@ class ProductManagement extends React.Component{
 								<table className="table table-hover table-responsive-block" id="tableWithSearch">
 										<thead>
 											<tr>
-												<th>#</th>
 												<th>Order Number</th>
 												<th>Customer</th>
+												<th>Product Name</th>
 												<th>Price</th>
-												<th>Order Detail</th>
-												<th>Action</th>
+												<th>Amount</th>
 											</tr>
 										</thead>
 										<tbody>
-											<tr>
-												<td className="v-align-middle semi-bold">
-													<p>1</p>
-												</td>
-												<td className="v-align-middle">
-													<p>OR123910</p>
-												</td>
-												<td className="v-align-middle">
-													<p>Monkey D Luffy</p>
-												</td>
-												<td className="v-align-middle">
-													<p>23,123</p>
-												</td>
-												<td className="v-align-middle">
-													<button className="btn btn-primary m-b-10" type="button"><i className="pg-form"></i></button>
-												</td>
-												<td className="v-align-middle">
-													<button className="btn btn-danger m-b-10 mx-1" type="button"><i className="pg-trash"></i></button>
-												</td>
-											</tr>
+										{
+													this.state.allProduct.map((data,index)=>
+													<tr>
+														<td className="v-align-middle semi-bold">
+															<p>{data.OrderID}</p>
+														</td>
+														<td className="v-align-middle">
+															<p>{data.Firstname} {data.Lastname}</p>
+														</td>
+														<td className="v-align-middle">
+															<p>{data.ProductName}</p>
+														</td>
+														<td className="v-align-middle">
+															<p>{data.Price}</p>
+														</td>
+														<td className="v-align-middle">
+															<p>{data.QtyOfProduct}</p>
+														</td>
+														
+													</tr>
+													)
+												}
 											
 										</tbody>
 									</table>

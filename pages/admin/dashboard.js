@@ -12,7 +12,8 @@ injectGlobal`
 class Dashboard extends React.Component{
     state={
         useramout:0,
-        userDetail:null
+        userDetail:null,
+        total:0
     }
     componentWillMount = async()=>{
         let data = await Axios({
@@ -23,7 +24,17 @@ class Dashboard extends React.Component{
                 return res
           });
         this.setState({useramout:data.data[0].useramout})
-        console.log(this.state.useramout)
+        let x = await Axios({
+            method:'get',
+            url:'http://localhost:3001/admin/total',
+          })
+            .then(function(res) {
+                return res
+          });
+          console.log(data)
+        this.setState({total:x.data.data})
+        console.log(this.state.total)
+        
 
     }
     componentDidMount = async () =>{
@@ -43,7 +54,7 @@ class Dashboard extends React.Component{
                                     <Card topic="All Users" value={this.state.useramout} myclass="fa fa-user mx-2 mr-3" />
                                 </div>
                                 <div className="col-lg-3 m-b-10">
-                                    <Card topic="Income" value="0" myclass="fa fa-money mx-2 mr-3" />
+                                    <Card topic="Income" value={this.state.total} myclass="fa fa-money mx-2 mr-3" />
                                 </div>
                             </div>
                         </AdminLayout>  :

@@ -4,34 +4,17 @@ import Footer from './footer';
 import MyHead from './head'
 import Carousel from './carousel';
 import Axios from 'axios';
+import Swal from 'sweetalert2'
 export default Component => {
     return class MyLayout extends React.Component {
         state = {
             items: []
         }
-        buy = async() =>{
-            console.log(this.state.items)
-            await Axios({
-                method: 'post',
-                url: 'http://localhost:3001/buy/',
-                data: this.state.items,
-                
-            }).then(async function (response) {
-                if(response.data == false){
-                }
-                else{
-                    let userData = response.data[0]
-                    if(userData.RoleID == 0){
-                        alert('คุณไม่ใช่แอดมิน')
-                    }
-                    else{
-                        alert('login')
-                        
-                    }
-                    window.localStorage.setItem('userdetail',JSON.stringify(response.data[0]));
-                    await location.reload()
-                }
-              })
+        buy = () =>{
+            swal({
+                title: '( ͡° ͜ʖ ͡°)',
+                text: 'Future Function',
+                timer: 2000})
         }
         render () {
             return (

@@ -1,7 +1,7 @@
 import Head from './adminhead'
 import styled , { injectGlobal } from 'styled-components'
 import Link from 'next/link'
-
+import Router from 'next/router'
 const TopicFont = styled.p`
     color: white;
     margin-left: 1.2em;
@@ -12,7 +12,13 @@ injectGlobal`
         min-height:100vh !important;
     }
 `
-
+const logout = async() =>{
+    localStorage.removeItem("userdetail");
+    console.log('logout')
+    Router.push({
+        pathname: '/admin',
+    })
+}
 const AdminLayout = (props) =>(
     <div>
         <Head />
@@ -88,8 +94,7 @@ const AdminLayout = (props) =>(
                     <div className="d-flex align-items-center">
 
                         <div className="pull-left p-r-10 fs-14 font-heading hidden-md-down">
-                            <span className="semi-bold">กูเอง</span>
-                            <span className="text-master">แอดมิน</span>
+                            <button className="btn btn-danger" onClick={logout}>Logout</button>
                         </div>
                         <div className="dropdown pull-right hidden-md-down">
                             <button className="profile-dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
